@@ -1,0 +1,29 @@
+import company1 from '../assets/company1.svg'
+import company2 from '../assets/company2.svg'
+import company3 from '../assets/company3.svg'
+import company4 from '../assets/company4.svg'
+import company5 from '../assets/company5.svg'
+import company6 from '../assets/company6.svg'
+import company7 from '../assets/company7.svg'
+import company8 from '../assets/company8.svg'
+import noise from '../assets/noise.png'
+
+const companies = [company1, company2, company3, company4, company5, company6, company7, company8]
+
+export const TrustedCompanies = () => {
+  return (
+    <div className="flex flex-col items-center justify-center gap-5">
+      <div  style={{backgroundImage: `url(${noise})`}} className='bg-clip-text text-transparent bg-center bg-no-repeat select-transparent'>
+      <p className="text-sm font-bold">Trusted by the world’s leading businesses</p>
+      </div>
+      <div className="flex flex-row items-center justify-center gap-10">
+       {companies.map((company, index) => (
+        <div className='w-20'>
+        <img src={company} alt="logo" key={index} className='w-full'/>
+        </div>
+       ))}
+        </div>
+    </div>
+  )
+}
+
