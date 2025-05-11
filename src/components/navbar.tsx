@@ -28,7 +28,7 @@ const NavbarButton = ({ buttonName }: NavbarButton) => {
 
 export const Navbar = () => {
   return (
-    <div className="flex justify-center min-h-20 items-center sticky top-0 z-10">
+    <div className="flex justify-center min-h-20 items-center sticky top-0 z-20">
       <div className="flex items-center justify-between w-[75%]">
         <div className="flex items-center justify-center gap-2">
           <NavbarTemplate>
