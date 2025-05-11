@@ -24,7 +24,7 @@ export const Hero = () => {
             </p>
 
             <div className="py-3 flex flex-col gap-2 items-center justify-center">
-                <Button href="#" text="Get Started. It's FREE!" fontSize="20px" />
+                <Button href="#" text="Get started. It's FREE!" fontSize="18px"/>
                 <span className="text-xs text-gray-500 font-medium">
                     Free Forever. No Credit Card.
                 </span>

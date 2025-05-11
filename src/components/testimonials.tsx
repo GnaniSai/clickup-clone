@@ -73,7 +73,7 @@ export const Testimonials = () => {
 
             <div className="flex items-center justify-center gap-5 w-full overflow-scroll scrollbar-hide px-5 my-10">
                 {testimonials.map((testimonial, index) => (
-                    <div className="flex items-center justify-center min-w-[340px] h-[600px] relative cursor-pointer" key={index}>
+                    <div className="flex items-center justify-center min-w-[340px] h-[600px] max-lg:min-w-[330px] max-lg:h-[550px] relative cursor-pointer" key={index}>
                         <div className="w-full h-full rounded-2xl border border-black">
                             <img src={testimonial.image} alt="" className="w-full h-full object-cover rounded-2xl" />
                         </div>

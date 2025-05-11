@@ -1,12 +1,13 @@
 import logo from "../assets/logo.svg"
+import downArrow from "../assets/down-arrow.svg"
 import { Button } from "./button"
-// import downArrow from "../assets/down-arrow.svg"
+import menuIcon from "../assets/menu.png"
 
-type NavbarTemplate = {
+type NavbarTemplateProps = {
   children: React.ReactNode
 }
 
-const NavbarTemplate = ({ children }: NavbarTemplate) => {
+const NavbarTemplate = ({ children }: NavbarTemplateProps) => {
   return (
     <div className="p-1 bg-white flex items-center justify-center gap-1 box-border border rounded-xl border-gray-300 shadow-[0_4px_6px_0_rgba(67,46,134,0.04)]">
       {children}
@@ -14,52 +15,87 @@ const NavbarTemplate = ({ children }: NavbarTemplate) => {
   )
 }
 
-type NavbarButton = {
+type NavbarButtonProps = {
   buttonName: string
+  hasDropdown?: boolean
+  href?: string
 }
 
-const NavbarButton = ({ buttonName }: NavbarButton) => {
-  return (
-    <button className="flex items-center justify-center text-md hover:bg-gray-100 py-2 px-2.5 rounded-lg cursor-pointer">
+const NavbarButton = ({ buttonName, hasDropdown = false, href }: NavbarButtonProps) => {
+  const content = (
+    <>
       <span className="text-sm text-[#24223e]">{buttonName}</span>
-    </button>
+      {hasDropdown && <img src={downArrow} alt="dropdown" className="w-5 h-5" />}
+    </>
+  )
+
+  const baseClasses =
+    "flex items-center justify-center text-md hover:bg-gray-100 py-2 px-2.5 rounded-lg cursor-pointer gap-1"
+
+  return href ? (
+    <a href={href} className={baseClasses}>
+      {content}
+    </a>
+  ) : (
+    <button className={baseClasses}>{content}</button>
   )
 }
 
 export const Navbar = () => {
+  const navItems = [
+    { name: "Product", hasDropdown: true },
+    { name: "Solutions", hasDropdown: true },
+    { name: "Resources", hasDropdown: true },
+    { name: "Pricing", href: "#" },
+    { name: "Enterprise", href: "#" },
+  ]
+
   return (
-    <div className="flex justify-center min-h-20 items-center sticky top-0 z-20">
-      <div className="flex items-center justify-between w-[75%]">
-        <div className="flex items-center justify-center gap-2">
+    <div className="flex justify-center min-h-20 items-center w-full sticky top-0 z-20 ">
+      <div className="flex items-center justify-between w-[70%] max-lg:w-[90%]">
+        <div className="flex items-center justify-center gap-3">
           <NavbarTemplate>
             <div className="flex items-center justify-center gap-2 py-1.5 px-2.5">
               <div className="w-20">
                 <img src={logo} alt="logo" />
               </div>
               <div className="w-23 border-l border-gray-300 leading-3">
-                <p className="text-[10px] pl-2 ">The everything app, for work.</p>
+                <p className="text-[10px] pl-2">The everything app, for work.</p>
               </div>
             </div>
           </NavbarTemplate>
 
-          <NavbarTemplate>
-            <NavbarButton buttonName="Product" />
-            <NavbarButton buttonName="Solutions" />
-            <NavbarButton buttonName="Resources" />
-            <NavbarButton buttonName="Pricing" />
-            <NavbarButton buttonName="Enterprise" />
+         <div className="max-lg:hidden">
+         <NavbarTemplate>
+            {navItems.map((item) => (
+              <NavbarButton
+                key={item.name}
+                buttonName={item.name}
+                hasDropdown={item.hasDropdown}
+                href={item.href}
+              />
+            ))}
           </NavbarTemplate>
+         </div>
         </div>
 
-        <div className="flex items-center justify-center gap-2">
+        <div className="flex max-lg:hidden items-center justify-center gap-2">
+          <div className="max-xl:hidden">
           <NavbarTemplate>
-            <NavbarButton buttonName="Contact Sales" />
+            <NavbarButton buttonName="Contact Sales" href="#" />
           </NavbarTemplate>
+          </div>
           <NavbarTemplate>
-            <NavbarButton buttonName="Log in" />
-            <Button href="#" text="Sign up" fontSize="16px" />
+            <NavbarButton buttonName="Log in" href="#" />
+            <Button href="#" text="Sign Up" fontSize="15px" />
           </NavbarTemplate>
         </div>
+        <div className="hidden max-lg:flex items-stretch justify-center gap-2">
+            <Button href="#" text="Sign up" fontSize="14px" />
+            <NavbarTemplate>
+              <img src={menuIcon} alt="menu" className="w-4 h-4 " />
+            </NavbarTemplate>
+          </div>
       </div>
     </div>
   )

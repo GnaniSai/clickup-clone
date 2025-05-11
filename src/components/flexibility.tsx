@@ -76,7 +76,7 @@ export const Flexibility = () => {
         }
     ]
     return (
-        <div className="flex flex-col items-center justify-center mx-50 my-20">
+        <div className="flex flex-col items-center justify-center mx-50 max-lg:mx-20 my-20">
             <div className="text-center mt-15">
                 <SectionHighlight
                     title="Everything your team is looking for"
@@ -84,14 +84,14 @@ export const Flexibility = () => {
                 />
             </div>
 
-            <div className="grid grid-cols-2 grid-rows-2 gap-7  mx-50 my-10">
+            <div className="grid grid-cols-2 grid-rows-2 gap-7 mx-50 max-lg:mx-0  my-10">
                 {flexibilityCardsData.map((item) => (
                     <FlexibilityCards title={item.title} description={item.description} children={item.children} />
                 ))}
 
                 <div className="col-span-2 rounded-2xl">
                     <div className="bg-[linear-gradient(351deg,_#5037E7_12.36%,_#EB00FF_124.69%)] px-10 pt-10 pb-5 relative flex gap-20 rounded-2xl">
-                        <div className="w-[350px] text-white rounded-2xl">
+                        <div className="w-[350px] max-lg:w-[500px] text-white rounded-2xl">
                             <div>
                                 <h3 className="text-xl font-bold mb-2">Plays well with others</h3>
                                 <span className="text-[16px] my-5">
@@ -105,7 +105,7 @@ export const Flexibility = () => {
                         <div className="absolute top-0 left-49 h-full">
                             <img src={separator} alt="separator" className="w-full h-full object-cover rounded-2xl" />
                         </div>
-                        <div className="w-[350px] text-white rounded-2xl">
+                        <div className="w-[350px] max-lg:w-[500px] text-white rounded-2xl">
                             <div>
                                 <h3 className="text-xl font-bold mb-2">Replaces them entirely</h3>
                                 <span className="text-[16px] my-5">

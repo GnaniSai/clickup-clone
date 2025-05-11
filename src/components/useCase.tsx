@@ -9,7 +9,7 @@ export const UseCase = () => {
         See all use cases
       </button>} />
     </div>
-      <div className="flex justify-center gap-10 mx-50">
+      <div className="flex max-lg:flex-col justify-center gap-10 mx-50">
         <div className="flex flex-col flex-1 my-2">
           <div className="border-l-2 border-[#7612fa] pl-5">
             <h3 className="text-lg text-[#7612fa] font-bold pt-2">Launch any campaign</h3>

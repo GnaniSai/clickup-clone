@@ -1,19 +1,22 @@
 type Button = {
     href: string
     text: string
-    fontSize: string
+    fontSize?: string
+    width?: string
 }
-export function Button({ href, text ,fontSize}:Button) {
+export function Button({ href, text ,fontSize="14px",width="fit"}:Button) {
   const gradient =
-    "linear-gradient(180deg, rgba(243, 238, 255, 0), rgba(243, 238, 255, 0.04)), linear-gradient(100deg, #7612fa -6.36%, #fa12e3 60.18%)";
+    "linear-gradient(100deg, #40ddff -6.08%, #7612fa 25.08%, #fa12e3)";
 
   return (
     <a
       href={href}
-      className={`py-1.5 px-2.5 rounded-lg font-semibold whitespace-nowrap text-white`}
+      className={`${fontSize === "18px" ? "py-4 px-7" : "p-3"} ${width === "full" ? "w-full" : "w-fit"} transition-shadow duration-200 ease-in-out rounded-[10px] tracking-tight text-md font-bold whitespace-nowrap text-white`}
       style={{
         background: gradient,
-        fontSize: fontSize
+        fontSize: fontSize,
+        boxShadow: "inset 0 0 0 1px rgba(0, 0, 0, 0.15)",
+        lineHeight: "1"
       }}
     >
       {text}

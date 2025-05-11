@@ -1,5 +1,5 @@
 import './App.css'
-import { TopBanner } from './components/topBanner'
+// import { TopBanner } from './components/topBanner'
 import { Navbar } from './components/navbar'
 import {Hero} from './components/hero'
 import { TrustedCompanies } from './components/trustedCompanies'
@@ -16,7 +16,7 @@ function App() {
 
   return (
      <div>
-      <TopBanner/>
+      
       <Navbar/>
       <Hero/>
       <TrustedCompanies/>

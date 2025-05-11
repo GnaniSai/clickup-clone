@@ -70,8 +70,8 @@ export const Features = () => {
                     Discover all features
                 </button>} />
             </div>
-            <div className="w-full px-10 my-10">
-                <div className="grid grid-cols-10 grid-rows-6 gap-4">
+            <div className=" px-10 my-10">
+                <div className="grid grid-cols-10 justify-center w-fit overflow-scroll  grid-rows-6 gap-4">
                     {Array.from({ length: 48 }).map((_, index) => {
                         if ([13, 14, 27, 28].includes(index)) {
                             const card = largeCards[largeCardIndex++];

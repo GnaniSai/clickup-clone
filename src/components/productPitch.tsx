@@ -1,7 +1,6 @@
 import video1 from '../assets/video1.mp4'
 import video2 from '../assets/video2.mp4'
 import { Button } from './button';
-// {title, description, video}: {title: string, description: string, video: string}
 export const ProductPitch = () => {
   const productPitch = [
     {
@@ -23,10 +22,10 @@ different apps</span>
     }
   ]
   return (
-    <div className="flex items-stretch justify-center gap-5 my-30">
+    <div className="flex items-stretch max-lg:items-center max-lg:flex-col justify-center gap-5 my-30">
     {productPitch.map((item,index)=>{
       return(
-        <div className="flex flex-col w-[430px] rounded-2xl" key={index} style={{backgroundColor: item.bgColor}}>
+        <div className="flex flex-col w-[430px] max-lg:w-[380px] rounded-2xl" key={index} style={{backgroundColor: item.bgColor}}>
         <div className="pt-11 px-10 w-full rounded-lg">
             <h2 className="text-4xl mb-2 font-bold" style={{color: item.textColor}}>
             {item.title}
@@ -39,7 +38,7 @@ different apps</span>
               {item.span}
             </div>
         </div>
-        <div className='rounded-b-2xl w-full h-[400px] overflow-hidden'>
+        <div className='rounded-b-2xl w-full h-[400px] max-lg:h-[300px] overflow-hidden'>
             <video src={item.video} className='w-full h-full object-cover object-center' autoPlay muted loop></video>
         </div>
      </div>
