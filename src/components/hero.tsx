@@ -4,7 +4,7 @@ import bgGradient2 from "../assets/bgGradient2.svg";
 export const Hero = () => {
     return (
         <div
-            className="relative flex flex-col items-center max-sm:mx-5 my-20 max-md:my-10 max-sm:my-7 justify-center overflow-hidden"
+            className="relative flex flex-col items-center max-sm:mx-3 my-20 max-md:my-10 max-sm:my-7 justify-center overflow-hidden"
         >
 
             <div className="absolute inset-9 z-10 top-40 mix-blend-overlay pointer-events-none max-md:hidden select-none">
