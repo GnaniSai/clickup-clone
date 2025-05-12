@@ -77,7 +77,7 @@ export const UseCase = () => {
         />
       </div>
 
-      <div className="flex max-lg:flex-col justify-center gap-10 max-xl:mx-25 mx-55">
+      <div className="flex max-lg:flex-col justify-center gap-10 max-xl:mx-25 max-sm:mx-5 mx-55">
         <div className="flex flex-col flex-1 gap-4 my-2 ">
           {useCaseCards.map((card, index) => (
             <UseCaseCard

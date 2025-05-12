@@ -54,8 +54,8 @@ export const SmallHeroSection = () =>{
         }
     ]
     return(
-        <div className="hidden justify-center flex-col items-center max-md:flex mx-10">
-          <div className='grid-cols-4 grid-rows-3 w-full max-md:grid'>
+        <div className="hidden justify-center flex-col items-center max-md:flex mx-10 max-sm:mx-5">
+          <div className='grid-cols-4 grid-rows-3 w-full max-md:grid max-sm:grid-cols-3 max-sm:grid-rows-4'>
           {data.map((item, index) => (
             <div key={index} className="p-5 flex flex-col items-center justify-center gap-2">
                 <img src={item.icon} alt="icon" />
@@ -69,7 +69,7 @@ export const SmallHeroSection = () =>{
            </div>
            <div className='flex items-center gap-2 my-2'>
             <img src={stars} alt="stars" className='h-5'/>
-            <span>25, 000+ reviews from</span>
+            <span className='text-xs text-gray-600'>25, 000+ reviews from</span>
             <img src={reviews} alt="reviews" className='h-3'/>
            </div>
         </div>

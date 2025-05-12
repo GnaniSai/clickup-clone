@@ -60,7 +60,7 @@ export const Navbar = () => {
               <div className="w-20">
                 <img src={logo} alt="logo" />
               </div>
-              <div className="w-23 border-l border-gray-300 leading-3">
+              <div className="w-23 border-l border-gray-300 leading-3 max-sm:hidden">
                 <p className="text-[10px] pl-2">The everything app, for work.</p>
               </div>
             </div>

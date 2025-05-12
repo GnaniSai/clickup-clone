@@ -25,7 +25,7 @@ different apps</span>
     <div className="flex items-stretch max-lg:items-center max-md:flex-col justify-center gap-5 max-md:my-10 my-30 mx-5">
     {productPitch.map((item,index)=>{
       return(
-        <div className="flex flex-col w-[430px] max-md:w-[380px] rounded-2xl" key={index} style={{backgroundColor: item.bgColor}}>
+        <div className="flex flex-col w-[430px] max-sm:w-[350px] max-md:w-[380px] rounded-2xl" key={index} style={{backgroundColor: item.bgColor}}>
         <div className="pt-11 px-10 w-full rounded-lg">
             <h2 className="text-4xl mb-2 font-bold" style={{color: item.textColor}}>
             {item.title}

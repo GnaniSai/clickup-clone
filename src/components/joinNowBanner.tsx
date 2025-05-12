@@ -6,7 +6,7 @@ import warmvector from "../assets/warm-vector.png"
 import noisewide from "../assets/noise-wide.png"
 export const JoinNowBanner = () => {
     return (
-        <div className="mx-50 max-xl:mx-20 my-20 max-md:mx-10 relative" >
+        <div className="mx-50 max-xl:mx-20 my-20 max-sm:mx-5 max-md:mx-10 relative" >
             <img
                 src={noisewide}
                 alt="noise bg"
