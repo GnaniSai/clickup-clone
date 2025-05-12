@@ -15,11 +15,14 @@ export const Hero = () => {
                 />
             </div>
 
-            <h2 className="text-6xl font-extrabold text-[#24223e] text-center">
+            <h2 className="text-6xl font-extrabold text-[#24223e] max-md:text-3xl text-center">
                 The everything app, for work.
             </h2>
-            <p className="text-lg text-center text-[#24223e] font-medium w-full sm:w-3/4 md:w-2/3 lg:w-[35%] py-4">
+            <p className="text-lg max-md:hidden text-center text-[#24223e] font-medium w-full py-4">
                 One app for projects, knowledge, conversations, and more. Get more done faster—together.
+            </p>
+            <p className="hidden max-md:block text-center text-[#24223e] font-medium w-full py-4">
+            One app to align, collaborate, and work. Designed to boost productivity and save teams a day every week.
             </p>
 
             <div className="py-3 flex flex-col gap-2 items-center justify-center">
