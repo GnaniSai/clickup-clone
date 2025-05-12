@@ -32,7 +32,7 @@ export const SmallHeroSection = () => {
 
   return (
     <>
-    <hr className='w-full h-[2px] text-[#b4b4b7e3]' />
+    <hr className='w-full h-[2px] text-[#b4b4b7e3] hidden max-md:block'/>
     <div className="hidden justify-center flex-col items-center max-md:flex px-10 py-7 bg-[#f8f8fc] max-sm:px-5">
       <div className="grid grid-cols-4 grid-rows-3 gap-4 w-full max-sm:grid-cols-3 max-sm:grid-rows-4">
         {data.map((item, index) => (
