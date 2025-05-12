@@ -59,7 +59,7 @@ export const WorkspaceSetup = () => {
 
 
   return (
-    <div className="w-full flex my-10 items-start justify-center">
+    <div className="w-full flex my-10 items-start justify-center max-md:hidden">
       <div className="relative w-full flex justify-center">
 
         <div className={`mx-50 max-lg:mx-20  max-xl:mx-10 text-white w-full h-[500px] overflow-hidden ${!imageSelected ? 'blur-[2px]' : ''} p-2 border border-white rounded-xl`}>
@@ -68,7 +68,7 @@ export const WorkspaceSetup = () => {
 
 
         <div className="absolute right-20 max-xl:right-10 -top-5 z-10 w-[400px] border-2 border-white p-2 rounded-2xl max-lg:w-[380px]">
-        <div className='absolute right-0 top-0 mix-blend-overlay opacity-50 scale-200'>
+        <div className='absolute right-0 top-0 mix-blend-overlay opacity-50 scale-200 '>
               <img src={bgGradient1} alt="gradient" className='w-full h-full object-cover object-top' />
             </div>
           <div className="relative px-6 py-4 rounded-xl text-center bg-white">

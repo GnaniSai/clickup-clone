@@ -12,17 +12,24 @@ const companies = [company1, company2, company3, company4, company5, company6, c
 
 export const TrustedCompanies = () => {
   return (
-    <div className="flex flex-col items-center justify-center gap-5">
-      <div  style={{backgroundImage: `url(${noise})`}} className='bg-clip-text text-transparent bg-center bg-no-repeat select-transparent'>
+    <div className="flex flex-col items-center max-md:hidden justify-center gap-5 w-full">
+      <div
+        style={{ backgroundImage: `url(${noise})` }}
+        className="bg-clip-text text-transparent bg-center bg-no-repeat select-transparent"
+      >
         <p className="text-sm font-bold">Trusted by the world’s leading businesses</p>
       </div>
-      <div className="flex items-center justify-start overflow-x-auto max-w-full gap-10 py-5">
-        {companies.map((company, index) => (
-          <div key={index} className="w-23">
-            <img src={company} alt="logo" className='w-full h-full' />
-          </div>
-        ))}
+
+      <div className="w-full overflow-x-auto scrollbar-hide">
+        <div className="flex items-center justify-center gap-10 py-5 px-4 min-w-max">
+          {companies.map((company, index) => (
+            <div key={index} className="w-24 flex-shrink-0">
+              <img src={company} alt={`Company ${index}`} className="w-full h-full object-contain" />
+            </div>
+          ))}
+        </div>
       </div>
     </div>
-  )
-}
+  );
+};
+

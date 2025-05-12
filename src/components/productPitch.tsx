@@ -22,7 +22,7 @@ different apps</span>
     }
   ]
   return (
-    <div className="flex items-stretch max-lg:items-center max-md:flex-col justify-center gap-5 my-30 mx-5">
+    <div className="flex items-stretch max-lg:items-center max-md:flex-col justify-center gap-5 max-md:my-10 my-30 mx-5">
     {productPitch.map((item,index)=>{
       return(
         <div className="flex flex-col w-[430px] max-md:w-[380px] rounded-2xl" key={index} style={{backgroundColor: item.bgColor}}>

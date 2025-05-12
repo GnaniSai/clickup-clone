@@ -12,6 +12,7 @@ import { Flexibility } from './components/flexibility'
 import { TeamTemplates } from './components/teamTemplates'
 import { JoinNowBanner } from './components/joinNowBanner'
 import { Footer } from './components/footer'
+import { SmallHeroSection } from './components/smallHeroSection'
 function App() {
 
   return (
@@ -19,6 +20,7 @@ function App() {
       
       <Navbar/>
       <Hero/>
+      <SmallHeroSection/>
       <TrustedCompanies/>
       <ProductPitch/>
       <UseCase/>
