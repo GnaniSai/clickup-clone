@@ -147,10 +147,10 @@ export const Footer = () => {
             subTitle: "Connect",
             subContent: (
                 <div className="flex gap-2 mt-2">
-                    <a href="#"><img src={linkedin} alt="linkedin" className="w-6 h-6" /></a>
-                    <a href="#"><img src={facebook} alt="facebook" className="w-6 h-6" /></a>
-                    <a href="#"><img src={instagram} alt="instagram" className="w-6 h-6" /></a>
-                    <a href="#"><img src={twitter} alt="twitter" className="w-6 h-6" /></a>
+                    <a href="#"><img src={linkedin} alt="linkedin" className="w-6 h-6 duration-200 ease-[cubic-bezier(0.5,0,0.5,1)] delay-0 transform hover:translate-y-[2px]" /></a>
+                    <a href="#"><img src={facebook} alt="facebook" className="w-6 h-6 duration-200 ease-[cubic-bezier(0.5,0,0.5,1)] delay-0 transform hover:translate-y-[2px]" /></a>
+                    <a href="#"><img src={instagram} alt="instagram" className="w-6 h-6 duration-200 ease-[cubic-bezier(0.5,0,0.5,1)] delay-0 transform hover:translate-y-[2px]" /></a>
+                    <a href="#"><img src={twitter} alt="twitter" className="w-6 h-6 duration-200 ease-[cubic-bezier(0.5,0,0.5,1)] delay-0 transform hover:translate-y-[2px]" /></a>
                 </div>
             ),
         },

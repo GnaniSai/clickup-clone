@@ -16,7 +16,7 @@ export const ProductPitch = () => {
       video: video2,
       bgColor: 'black',
       textColor: 'white',
-      button: <Button href='/' text='Get Started' fontSize='16px' />,
+      button: <Button href='/' text='Get Started' fontSize='16px' bgColor='white' color='black'  withArrow={true}/>,
       span: <span className='text-xs text-gray-600'>converge over 50+
 different apps</span>
     }
@@ -33,7 +33,7 @@ different apps</span>
             <p className="text-md  py-2" style={{color: item.textColor}}>
             {item.description}
             </p>
-            <div className='flex items-center gap-5 my-5'>
+            <div className='flex items-center gap-3 my-5'>
               {item.button}
               {item.span}
             </div>

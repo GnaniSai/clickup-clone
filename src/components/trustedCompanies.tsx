@@ -18,8 +18,8 @@ export const TrustedCompanies = () => {
       </div>
       <div className="flex flex-row items-center justify-center gap-10">
        {companies.map((company, index) => (
-        <div className='w-20'>
-        <img src={company} alt="logo" key={index} className='w-full'/>
+        <div className='w-23'>
+        <img src={company} alt="logo" key={index} className='w-full h-full'/>
         </div>
        ))}
         </div>

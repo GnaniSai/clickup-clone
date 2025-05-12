@@ -12,6 +12,7 @@ import gradient4 from "../assets/gradientBg4.svg"
 import whiteboard from "../assets/whiteboard.svg"
 import chat from "../assets/chat.svg"
 import docs from "../assets/docs.svg"
+import { Button } from "./button"
 
 const FeatureCardSmall = () => {
     return (
@@ -66,9 +67,9 @@ export const Features = () => {
     return (
         <div className="flex flex-col items-center justify-center my-20 bg-[#f8f2ff] relative">
             <div className="text-center mx-80 mt-15">
-                <SectionHighlight subtitle="Features" title="Every feature your team needs to complete work faster" description="100+ features to take productivity to the next level." children={<button className="text-white bg-black font-bold px-4 py-2 my-3 text-lg rounded-lg">
-                    Discover all features
-                </button>} />
+                <SectionHighlight subtitle="Features" title="Every feature your team needs to complete work faster" description="100+ features to take productivity to the next level." children={<div className="flex justify-center mt-5">
+                    <Button href='/' text='Discover all features' fontSize='18px' bgColor='black' color='white'/>
+                </div>} />
             </div>
             <div className=" px-10 my-10">
                 <div className="grid grid-cols-10 justify-center w-fit overflow-scroll  grid-rows-6 gap-4">

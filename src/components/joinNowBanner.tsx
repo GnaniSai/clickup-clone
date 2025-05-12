@@ -10,7 +10,7 @@ export const JoinNowBanner = () => {
             <img
                 src={noisewide}
                 alt="noise bg"
-                className="absolute inset-0 w-full h-full object-cover mix-blend-overlay rounded-2xl"
+                className="absolute inset-0 w-full -z-10 h-full object-cover mix-blend-overlay rounded-2xl"
             />
             <div className="bg-black rounded-2xl border flex justify-between gap-3 items-end border-[#6060a34d]">
                 <div className="px-13 py-16 max-lg:px-5 max-lg:py-10 flex flex-col gap-5">
@@ -20,7 +20,7 @@ export const JoinNowBanner = () => {
                     <h3 className="text-white text-[40px] leading-[48px] font-extrabold">Supercharge your productivity</h3>
                     <p className="text-white text-[18px] leading-[25px] font-medium">Organize tasks, collaborate on docs, track goals, and streamline team communication—all in one place, enhanced by AI.</p>
                     <div className="mt-10">
-                        <Button href="#" text="Get started. It’s FREE" fontSize="17px" />
+                        <Button href="#" text="Get started. It’s FREE" fontSize="18px" bgColor="white" color="black" withArrow={true} />
                     </div>
                 </div>
                 <div className="absolute top-0 right-0 h-full rounded-br-2xl rounded-tr-2xl">

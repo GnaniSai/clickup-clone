@@ -135,7 +135,7 @@ export const TeamTemplates = () => {
                             ))}
                         </div>
                         <div className="max-lg:mt-0 py-10">
-                            <Button href="#" text="Use this solution" fontSize="17px" />
+                            <Button href="#" text="Use this solution" fontSize="17px" withArrow={true} />
                         </div>
                     </div>
                 </div>

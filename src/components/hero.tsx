@@ -1,18 +1,17 @@
 import { Button } from "./button";
 import { WorkspaceSetup } from "./workspaceSetup";
-import workspace3 from "../assets/workspace3.svg";
-
+import bgGradient2 from "../assets/bgGradient2.svg";
 export const Hero = () => {
     return (
         <div
             className="relative flex flex-col items-center my-20 justify-center overflow-hidden"
         >
 
-            <div className="absolute inset-0 -z-10 top-40 pointer-events-none select-none">
+            <div className="absolute inset-9 z-10 top-40 mix-blend-overlay pointer-events-none select-none">
                 <img
-                    src={workspace3}
+                    src={bgGradient2} 
                     alt="background"
-                    className="w-full h-full object-cover object-center opacity-60 scale-125"
+                    className="w-full h-full object-cover object-center opacity-50 scale-125"
                 />
             </div>
 
