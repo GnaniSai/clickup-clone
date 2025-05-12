@@ -14,16 +14,15 @@ export const TrustedCompanies = () => {
   return (
     <div className="flex flex-col items-center justify-center gap-5">
       <div  style={{backgroundImage: `url(${noise})`}} className='bg-clip-text text-transparent bg-center bg-no-repeat select-transparent'>
-      <p className="text-sm font-bold">Trusted by the world’s leading businesses</p>
+        <p className="text-sm font-bold">Trusted by the world’s leading businesses</p>
       </div>
-      <div className="flex flex-row items-center justify-center gap-10">
-       {companies.map((company, index) => (
-        <div className='w-23'>
-        <img src={company} alt="logo" key={index} className='w-full h-full'/>
-        </div>
-       ))}
-        </div>
+      <div className="flex items-center justify-start overflow-x-auto max-w-full gap-10 py-5">
+        {companies.map((company, index) => (
+          <div key={index} className="w-23">
+            <img src={company} alt="logo" className='w-full h-full' />
+          </div>
+        ))}
+      </div>
     </div>
   )
 }
-

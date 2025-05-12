@@ -25,7 +25,7 @@ const FeatureCardSmall = () => {
 const FeatureCardLarge = ({ gradientImg, bannerImg, title, icon }: { gradientImg: string, bannerImg: string, title: string, icon: string }) => {
     return (
         <div className="relative col-span-2 row-span-2 flex flex-col shadow-feature bg-white text-[#090c1d] shadow-lg rounded-2xl pb-4  items-center justify-center text-xl font-bold hover:border-[#7612fa] border border-transparent hover:text-[#7612fa] cursor-pointer text-center">
-            <img src={bannerImg} alt="download" className="w-full h-50 object-contain" />
+            <img src={bannerImg} alt="download" className="w-full px-10 h-50 object-contain" />
             <p className="flex items-center gap-2"><img src={icon} alt="" /> <span className="text-2xl font-extrabold">{title}</span></p>
             <div className="w-full h-full absolute top-0 left-0">
                 <img src={gradientImg} alt="download" />
@@ -65,16 +65,18 @@ export const Features = () => {
     ]
     let largeCardIndex = 0;
     return (
-        <div className="flex flex-col items-center justify-center my-20 bg-[#f8f2ff] relative">
+        <div className="flex flex-col items-center justify-center my-20 bg-[rgb(248,242,255)] relative">
             <div className="text-center mx-80 mt-15">
                 <SectionHighlight subtitle="Features" title="Every feature your team needs to complete work faster" description="100+ features to take productivity to the next level." children={<div className="flex justify-center mt-5">
-                    <Button href='/' text='Discover all features' fontSize='18px' bgColor='black' color='white'/>
+                    <Button href='/' text='Discover all features' fontSize='18px' bgColor='black' color='white' />
                 </div>} />
             </div>
-            <div className=" px-10 my-10">
-                <div className="grid grid-cols-10 justify-center w-fit overflow-scroll  grid-rows-6 gap-4">
-                    {Array.from({ length: 48 }).map((_, index) => {
-                        if ([13, 14, 27, 28].includes(index)) {
+            <div className="relative px-5 mb-10 h-[63vw] w-full flex justify-center whitespace-nowrap items-center overflow-hidden mt-4">
+                <div className="absolute inset-0 z-10 pointer-events-none vignette-bg"/>
+
+                <div className="grid grid-cols-10 h-max w-full grid-rows-6 gap-4 " style={{ boxShadow: "inset 0 0 150px 50px rgb(248,242,255)" }}>
+                    {Array.from({ length: 68 }).map((_, index) => {
+                        if ([23, 24, 37, 38].includes(index)) {
                             const card = largeCards[largeCardIndex++];
                             return <FeatureCardLarge key={`large-${index}`} {...card} />;
                         }

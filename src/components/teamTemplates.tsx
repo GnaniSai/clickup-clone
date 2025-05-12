@@ -6,6 +6,7 @@ import brand1 from "../assets/brand1.svg";
 import finstra from "../assets/finastra-headshot.png"
 import download from "../assets/download.svg"
 import { Button } from "./button";
+import { useState } from "react";
 const TeamButtons = ({
     buttonName,
     buttonImage,
@@ -15,12 +16,12 @@ const TeamButtons = ({
     buttonImage: string
     hideBelow?: "sm" | "md" | "lg" | "xl"
 }) => {
-    // Construct responsive class based on breakpoint
-    const hideClass = hideBelow ? `hidden ${hideBelow}:flex` : "flex";
-
+    const responsiveClass = `max-${hideBelow}:hidden`;
+    const [isClicked, setIsClicked] = useState(false);
     return (
         <button
-            className={`max-${hideClass}:hidden bg-white text-[#514b81] font-medium text-[17px] transition-all duration-[250ms] ease-[cubic-bezier(0.5,0,0.5,1)] delay-0 transform hover:translate-y-[4px] cursor-pointer px-4 py-3 border border-[#6060a34d] flex items-center gap-2 rounded-xl`}
+            className={`${responsiveClass} ${isClicked ? "bg-black text-white" : "bg-white text-[#514b81]"} font-medium text-[17px] transition-all duration-[250ms] ease-[cubic-bezier(0.5,0,0.5,1)] delay-0 transform hover:translate-y-[2px] cursor-pointer px-4 py-3 border border-[#6060a34d] flex items-center gap-2 rounded-xl`}
+            onClick={() => setIsClicked(!isClicked)}
         >
             <span>
                 <img src={buttonImage} alt={buttonName} />
@@ -55,7 +56,7 @@ export const TeamTemplates = () => {
         { name: "Marketing", image: marketing },
         { name: "Product", image: marketing },
         { name: "Engineering", image: marketing, hideBelow: "md" },
-        { name: "Agencies", image: marketing, hideBelow: "md" },
+        { name: "Agencies", image: marketing, hideBelow: "lg" },
         { name: "See all teams", image: marketing, hideBelow: "lg" },
       ];
       
@@ -86,11 +87,11 @@ export const TeamTemplates = () => {
     ];
 
     return (
-        <div className="flex flex-col items-center justify-center mx-50 max-lg:mx-20 my-20">
+        <div className="flex flex-col items-center justify-center mx-50 max-xl:mx-20 my-20 max-md:hidden">
             <div className="text-center">
                 <SectionHighlight subtitle="Templates for teams" title="Hit the ground running" description="Templates for every team to get started instantly." />
             </div>
-            <div className="flex items-center justify-center gap-4 mt-10 flex-wrap">
+            <div className="flex items-center justify-center gap-4 mt-10">
                 {buttonsData.map((button) => (
                     <TeamButtons
                         key={button.name}

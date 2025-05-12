@@ -31,17 +31,19 @@ const keyBenefitsData = [
 
 const KeyBenefits = () => {
     return (
-        <div className="flex  mx-50 max-lg:mx-20 items-center gap-10 divide-x-1 py-1 divide-gray-400">
+        <div className="flex mx-50 max-md:flex-col max-xl:mx-20 items-center gap-10 divide-x-1 py-1 divide-gray-400">
             <div className="flex items-center gap-3 pr-6 max-lg:pr-3">
                 <img src={logo} alt="logo" className="w-5 h-5" />
                 <span className="text-black font-bold text-[12px] text-sm">The everything app, for work.</span>
             </div>
+            <div className="flex items-center gap-3 pr-7 max-lg:pr-3">
             {keyBenefitsData.map((item, index) => (
                 <div key={index} className="flex items-center gap-3 pr-7 max-lg:pr-3">
                     <img src={item.logo} alt="logo" className="w-5 h-5" />
                     <a href={item.link} className="text-gray-900 text-[12px] hover:underline cursor-pointer font-medium text-sm">{item.title}</a>
                 </div>
             ))}
+            </div>
         </div>
     );
 };
@@ -56,7 +58,7 @@ type FooterLinksSectionProps = {
 
 const FooterLinksSection = ({ title, links, subTitle, subContent }: FooterLinksSectionProps) => {
     return (
-        <div className="min-w-[150px]">
+        <div className="min-w-[150px] max-md:min-w-[60px]">
             <h4 className="text-black font-bold text-[13px] mb-2">{title}</h4>
             <ul className="space-y-3 mb-4">
                 {links.map((link, index) => (
@@ -177,7 +179,7 @@ export const Footer = () => {
                 <hr className="border-gray-300 my-3" />
             </div>
 
-            <div className="flex flex-wrap gap-20 mx-50 max-lg:mx-10 mt-10">
+            <div className="flex flex-wrap gap-20 max-md:gap-10 mx-50 max-xl:mx-20 max-md:mx-10 mt-10">
                 {footerSections.map((section, index) => (
                     <FooterLinksSection key={index} title={section.title} links={section.links} subTitle={section.subTitle} subContent={section.subContent} />
                 ))}
@@ -185,7 +187,7 @@ export const Footer = () => {
             <hr className="border-gray-300 my-7" />
 
 
-            <div className="flex justify-between items-center mx-50 max-lg:mx-10">
+            <div className="flex justify-between items-center mx-50 max-md:mx-10 max-xl:mx-20">
                 <div className="flex gap-2">
                     {storeLogos.map((store, index) => (
                         <a key={index} href={store.link} className="w-full cursor-pointer">

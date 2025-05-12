@@ -29,7 +29,7 @@ export const SmartTools = () => {
         }
     ]
     return (
-        <div className="flex flex-col items-center justify-center my-20 mx-50 max-md:mx-20">
+        <div className="flex flex-col items-center justify-center my-20 mx-50 max-xl:mx-20">
             <div className="text-center">
                 <SectionHighlight subtitle="10x your work with smarter tools" title="Smart tools for smarter workflows" description="Work smarter in every way." />
             </div>

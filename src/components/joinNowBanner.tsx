@@ -6,13 +6,13 @@ import warmvector from "../assets/warm-vector.png"
 import noisewide from "../assets/noise-wide.png"
 export const JoinNowBanner = () => {
     return (
-        <div className="mx-50 max-lg:mx-20 my-20 relative" >
+        <div className="mx-50 max-xl:mx-20 my-20 max-md:mx-10 relative" >
             <img
                 src={noisewide}
                 alt="noise bg"
                 className="absolute inset-0 w-full -z-10 h-full object-cover mix-blend-overlay rounded-2xl"
             />
-            <div className="bg-black rounded-2xl border flex justify-between gap-3 items-end border-[#6060a34d]">
+            <div className="bg-black rounded-2xl border flex max-md:flex-col justify-between gap-3 items-end border-[#6060a34d]">
                 <div className="px-13 py-16 max-lg:px-5 max-lg:py-10 flex flex-col gap-5">
                     <div className="w-[180px] max-lg:w-[100px]">
                         <img src={logo} alt="logo" className="w-full" />

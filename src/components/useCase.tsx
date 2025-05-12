@@ -30,7 +30,7 @@ const UseCaseCard = ({
         {title}
       </h3>
       {isOpen && (
-        <p className="text-sm mt-1 text-[#090c1d] pb-2 w-65 animate-slide-down">
+        <p className="text-sm mt-1 text-[#090c1d] pb-2 w-65 max-lg:w-full animate-slide-down">
           {description}
         </p>
       )}
@@ -77,8 +77,8 @@ export const UseCase = () => {
         />
       </div>
 
-      <div className="flex  max-lg:flex-col justify-center gap-10 mx-55">
-        <div className="flex flex-col flex-1 gap-4 my-2">
+      <div className="flex max-lg:flex-col justify-center gap-10 max-xl:mx-25 mx-55">
+        <div className="flex flex-col flex-1 gap-4 my-2 ">
           {useCaseCards.map((card, index) => (
             <UseCaseCard
               key={index}

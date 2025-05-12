@@ -19,9 +19,10 @@ type NavbarButtonProps = {
   buttonName: string
   hasDropdown?: boolean
   href?: string
+  hideBelow?: "sm" | "md" | "lg" | "xl"
 }
 
-const NavbarButton = ({ buttonName, hasDropdown = false, href }: NavbarButtonProps) => {
+const NavbarButton = ({ buttonName, hasDropdown = false, href, hideBelow }: NavbarButtonProps) => {
   const content = (
     <>
       <span className="text-sm text-[#24223e]">{buttonName}</span>
@@ -31,9 +32,9 @@ const NavbarButton = ({ buttonName, hasDropdown = false, href }: NavbarButtonPro
 
   const baseClasses =
     "flex items-center justify-center text-md hover:bg-gray-100 py-2 px-2.5 rounded-lg cursor-pointer gap-1"
-
+    const responsiveClass = `max-${hideBelow}:hidden`;
   return href ? (
-    <a href={href} className={baseClasses}>
+    <a href={href} className={`${baseClasses} ${responsiveClass}`}>
       {content}
     </a>
   ) : (
@@ -43,16 +44,16 @@ const NavbarButton = ({ buttonName, hasDropdown = false, href }: NavbarButtonPro
 
 export const Navbar = () => {
   const navItems = [
-    { name: "Product", hasDropdown: true },
-    { name: "Solutions", hasDropdown: true },
-    { name: "Resources", hasDropdown: true },
-    { name: "Pricing", href: "#" },
-    { name: "Enterprise", href: "#" },
+    { name: "Product", hasDropdown: true},
+    { name: "Solutions", hasDropdown: true},
+    { name: "Resources", hasDropdown: true},
+    { name: "Pricing", href: "#", hideBelow: "lg" },
+    { name: "Enterprise", href: "#", hideBelow: "xl" },
   ]
 
   return (
     <div className="flex justify-center min-h-20 items-center w-full sticky top-0 z-20 ">
-      <div className="flex items-center justify-between w-[70%] max-lg:w-[90%]">
+      <div className="flex items-center justify-between w-[70%] max-xl:w-[93%] max-lg:w-[95%]">
         <div className="flex items-center justify-center gap-3">
           <NavbarTemplate>
             <div className="flex items-center justify-center gap-2 py-1.5 px-2.5">
@@ -73,6 +74,7 @@ export const Navbar = () => {
                 buttonName={item.name}
                 hasDropdown={item.hasDropdown}
                 href={item.href}
+                hideBelow={item.hideBelow as "sm" | "md" | "lg" | "xl"}
               />
             ))}
           </NavbarTemplate>
@@ -80,11 +82,9 @@ export const Navbar = () => {
         </div>
 
         <div className="flex max-lg:hidden items-center justify-center gap-2">
-          <div className="max-xl:hidden">
           <NavbarTemplate>
             <NavbarButton buttonName="Contact Sales" href="#" />
           </NavbarTemplate>
-          </div>
           <NavbarTemplate>
             <NavbarButton buttonName="Log in" href="#" />
             <Button href="#" text="Sign Up" fontSize="15px" />

@@ -66,7 +66,7 @@ export const Testimonials = () => {
     ]
 
     return (
-        <div className="flex flex-col items-center justify-center my-20">
+        <div className="flex flex-col items-center justify-center my-20 max-md:hidden">
             <div className="text-center mx-80 mt-15">
                 <SectionHighlight subtitle="Testimonials" title="Don’t just take it from us" description="Loved by teams. Backed by awards. Trusted worldwide." />
             </div>
