@@ -26,11 +26,11 @@ different apps</span>
     {productPitch.map((item,index)=>{
       return(
         <div className="flex flex-col w-[430px] max-sm:w-[350px] max-md:w-[380px] rounded-2xl" key={index} style={{backgroundColor: item.bgColor}}>
-        <div className="pt-11 px-10 w-full rounded-lg">
+        <div className="pt-11 px-10 max-sm:px-6 w-full rounded-lg">
             <h2 className="text-4xl mb-2 font-bold" style={{color: item.textColor}}>
             {item.title}
             </h2>
-            <p className="text-md  py-2" style={{color: item.textColor}}>
+            <p className="text-md py-2" style={{color: item.textColor}}>
             {item.description}
             </p>
             <div className='flex items-center gap-3 my-5'>
@@ -38,7 +38,7 @@ different apps</span>
               {item.span}
             </div>
         </div>
-        <div className='rounded-b-2xl w-full h-[400px] max-lg:h-[350px] max-md:h-[300px] overflow-hidden'>
+        <div className='rounded-b-2xl w-full h-[400px] max-lg:h-[350px] max-md:h-[320px] overflow-hidden'>
             <video src={item.video} className='w-full h-full object-cover object-center' autoPlay muted loop></video>
         </div>
      </div>

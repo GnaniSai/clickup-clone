@@ -14,11 +14,11 @@ import chat from "../assets/chat.svg"
 import docs from "../assets/docs.svg"
 import { Button } from "./button"
 
-const FeatureCardSmall = () => {
+const FeatureCardSmall = ({img, title}: {img: string, title: string}) => {
     return (
       <div className="flex flex-col shadow-feature bg-white p-3 w-full aspect-square max-md:p-2 text-[#090c1d] transition-all duration-100 ease-in-out cursor-pointer hover:border-[#7612fa] border border-transparent hover:text-[#7612fa] rounded-2xl items-center justify-center gap-2">
-        <img src={download} alt="download" className="w-6 h-6 max-md:w-5 max-md:h-5 object-contain" />
-        <span className="text-sm font-medium max-md:text-xs">Download</span>
+        <img src={img} alt="download" className="w-6 h-6 max-md:w-5 max-md:h-5 object-contain" />
+        <span className="text-sm font-medium max-md:text-xs">{title}</span>
       </div>
     );
   };
@@ -88,7 +88,7 @@ export const Features = () => {
                             return <FeatureCardLarge key={`large-${index}`} {...card} />;
                         }
 
-                        return <FeatureCardSmall key={`small-${index}`} />;
+                        return <FeatureCardSmall key={`small-${index}`} img={download} title="Download" />;
                     })}
                 </div>
 

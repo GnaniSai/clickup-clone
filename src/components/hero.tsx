@@ -4,7 +4,7 @@ import bgGradient2 from "../assets/bgGradient2.svg";
 export const Hero = () => {
     return (
         <div
-            className="relative flex flex-col items-center max-sm:mx-5 my-20 max-md:my-10 justify-center overflow-hidden"
+            className="relative flex flex-col items-center max-sm:mx-5 my-20 max-md:my-10 max-sm:my-7 justify-center overflow-hidden"
         >
 
             <div className="absolute inset-9 z-10 top-40 mix-blend-overlay pointer-events-none max-md:hidden select-none">
@@ -15,7 +15,7 @@ export const Hero = () => {
                 />
             </div>
 
-            <h2 className="text-6xl font-extrabold text-[#24223e] max-md:text-3xl text-center">
+            <h2 className="text-6xl font-extrabold text-[#24223e] max-md:text-[33px] leading-[40px] text-center">
                 The everything app, for work.
             </h2>
             <p className="text-lg max-md:hidden text-center text-[#24223e] font-medium w-full py-4">

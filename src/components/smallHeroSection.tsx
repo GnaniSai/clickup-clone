@@ -1,77 +1,64 @@
-import download from '../assets/download.svg'
 import { Button } from './button'
 import reviews from '../assets/reviews.svg'
 import stars from '../assets/stars.png'
-export const SmallHeroSection = () =>{
-    const data = [
-        {
-            icon: download,
-            title: 'Tasks'
-        },
-        {
-            icon: download,
-            title: 'Tasks'
-        },
-        {
-            icon: download,
-            title: 'Tasks'
-        },
-        {
-            icon: download,
-            title: 'Tasks'
-        },
-        {
-            icon: download,
-            title: 'Tasks'
-        },
-        {
-            icon: download,
-            title: 'Tasks'
-        },
-        {
-            icon: download,
-            title: 'Tasks'
-        },
-        {
-            icon: download,
-            title: 'Tasks'
-        },
-        {
-            icon: download,
-            title: 'Tasks'
-        },
-        {
-            icon: download,
-            title: 'Tasks'
-        },
-        {
-            icon: download,
-            title: 'Tasks'
-        },
-        {
-            icon: download,
-            title: 'Tasks'
-        }
-    ]
-    return(
-        <div className="hidden justify-center flex-col items-center max-md:flex mx-10 max-sm:mx-5">
-          <div className='grid-cols-4 grid-rows-3 w-full max-md:grid max-sm:grid-cols-3 max-sm:grid-rows-4'>
-          {data.map((item, index) => (
-            <div key={index} className="p-5 flex flex-col items-center justify-center gap-2">
-                <img src={item.icon} alt="icon" />
-                <span>{item.title}</span>
+import chat from "../assets/chat.svg"
+import docs from "../assets/docs.svg"
+import whiteboard from "../assets/whiteboard.svg"
+import sprints from "../assets/project-icon.svg"
+import tasks from "../assets/tasks.svg"
+import dashboard from "../assets/dashboards.svg"
+import forms from "../assets/forms.svg"
+import gantt from "../assets/gantt.svg"
+import timeTracking from "../assets/time-tracking.svg"
+import ai from "../assets/ai.svg"
+import automation from "../assets/automations.svg"
+import calendar from "../assets/calendar.svg"
+
+export const SmallHeroSection = () => {
+  const data = [
+    { icon: tasks, title: 'Tasks' },
+    { icon: chat, title: 'Chat' },
+    { icon: docs, title: 'Docs' },
+    { icon: calendar, title: 'Calendar' },
+    { icon: ai, title: 'AI' },
+    { icon: timeTracking, title: 'Time Tracking' },
+    { icon: gantt, title: 'Gantt' },
+    { icon: dashboard, title: 'Dashboards' },
+    { icon: forms, title: 'Forms' },
+    { icon: whiteboard, title: 'Whiteboards' },
+    { icon: sprints, title: 'Sprints' },
+    { icon: automation, title: 'Automations' }
+  ];
+
+  return (
+    <>
+    <hr className='w-full h-[2px] text-[#b4b4b7e3]' />
+    <div className="hidden justify-center flex-col items-center max-md:flex mx-10 pt-7 bg-[#f8f8fc] max-sm:mx-5">
+      <div className="grid grid-cols-4 grid-rows-3 gap-4 w-full max-sm:grid-cols-3 max-sm:grid-rows-4">
+        {data.map((item, index) => (
+          <div key={index} className="w-full h-full flex flex-col items-center justify-center p-2 gap-2">
+            <div className="w-10.5 h-10.5 flex items-center justify-center">
+              <img src={item.icon} alt={item.title} className="w-full h-full object-contain" />
             </div>
-           ))}
-           </div>
-           <p className='text-center w-full text-sm text-[#24223e] font-medium my-2'>and so much more..</p>
-           <div className='w-full my-2'>
-           <Button href='/' text='Get Started' width='full' fontSize='18px' />
-           </div>
-           <div className='flex items-center gap-2 my-2'>
-            <img src={stars} alt="stars" className='h-5'/>
-            <span className='text-xs text-gray-600'>25, 000+ reviews from</span>
-            <img src={reviews} alt="reviews" className='h-3'/>
-           </div>
-        </div>
-    )
-}
+            <span className="text-xs font-medium text-center">{item.title}</span>
+          </div>
+        ))}
+      </div>
+
+      <p className="text-center w-full text-xs text-[#24223e] font-medium my-4">
+        and so much more..
+      </p>
+
+      <div className="w-full my-2">
+        <Button href="/" text="Get Started" width="full" fontSize="18px" />
+      </div>
+
+      <div className="flex items-center gap-2 my-2">
+        <img src={stars} alt="stars" className="h-5" />
+        <span className="text-xs text-gray-600">25,000+ reviews from</span>
+        <img src={reviews} alt="reviews" className="h-3" />
+      </div>
+    </div>
+    </>
+  );
+};

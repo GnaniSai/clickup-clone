@@ -9,7 +9,7 @@ type NavbarTemplateProps = {
 
 const NavbarTemplate = ({ children }: NavbarTemplateProps) => {
   return (
-    <div className="p-1 bg-white flex items-center justify-center gap-1 box-border border rounded-xl border-gray-300 shadow-[0_4px_6px_0_rgba(67,46,134,0.04)]">
+    <div className="p-1 max-sm:px-4 bg-white flex items-center justify-center gap-1 box-border border rounded-xl border-gray-300 shadow-[0_4px_6px_0_rgba(67,46,134,0.04)]">
       {children}
     </div>
   )
@@ -53,11 +53,11 @@ export const Navbar = () => {
 
   return (
     <div className="flex justify-center min-h-20 items-center w-full sticky top-0 z-20 ">
-      <div className="flex items-center justify-between w-[70%] max-xl:w-[93%] max-lg:w-[95%]">
+      <div className="flex items-stretch justify-between w-[70%] max-xl:w-[90%]">
         <div className="flex items-center justify-center gap-3">
           <NavbarTemplate>
-            <div className="flex items-center justify-center gap-2 py-1.5 px-2.5">
-              <div className="w-20">
+            <div className="flex items-center justify-center gap-2 py-1.5 px-2.5 max-sm:px-0">
+              <div className="w-20 max-sm:w-22">
                 <img src={logo} alt="logo" />
               </div>
               <div className="w-23 border-l border-gray-300 leading-3 max-sm:hidden">
