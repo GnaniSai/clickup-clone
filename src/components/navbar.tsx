@@ -9,7 +9,7 @@ type NavbarTemplateProps = {
 
 const NavbarTemplate = ({ children }: NavbarTemplateProps) => {
   return (
-    <div className="p-1 max-sm:px-4 bg-white flex items-center justify-center gap-1 box-border border rounded-xl border-gray-300 shadow-[0_4px_6px_0_rgba(67,46,134,0.04)]">
+    <div className="p-1 bg-white flex items-center justify-center h-[47px] gap-1 border rounded-[15px] border-[#ceceea] shadow-[0_4px_6px_0_rgba(67,46,134,0.04)]">
       {children}
     </div>
   )
@@ -31,8 +31,8 @@ const NavbarButton = ({ buttonName, hasDropdown = false, href, hideBelow }: Navb
   )
 
   const baseClasses =
-    "flex items-center justify-center text-md hover:bg-gray-100 py-2 px-2.5 rounded-lg cursor-pointer gap-1"
-    const responsiveClass = `max-${hideBelow}:hidden`;
+    "flex items-center justify-center text-md hover:bg-gray-100 px-[12px] whitespace-nowrap rounded-lg cursor-pointer gap-1"
+  const responsiveClass = `max-${hideBelow}:hidden`;
   return href ? (
     <a href={href} className={`${baseClasses} ${responsiveClass}`}>
       {content}
@@ -44,58 +44,60 @@ const NavbarButton = ({ buttonName, hasDropdown = false, href, hideBelow }: Navb
 
 export const Navbar = () => {
   const navItems = [
-    { name: "Product", hasDropdown: true},
-    { name: "Solutions", hasDropdown: true},
-    { name: "Resources", hasDropdown: true},
+    { name: "Product", hasDropdown: true },
+    { name: "Solutions", hasDropdown: true },
+    { name: "Resources", hasDropdown: true },
     { name: "Pricing", href: "#", hideBelow: "lg" },
     { name: "Enterprise", href: "#", hideBelow: "xl" },
   ]
 
   return (
-    <div className="flex justify-center min-h-20 items-center w-full sticky top-0 z-20 ">
-      <div className="flex items-stretch justify-between w-[70%] max-xl:w-[90%]">
-        <div className="flex items-center justify-center gap-3">
+    <div className="flex justify-center min-h-20 items-center w-full sticky top-0 z-20">
+      <div className="flex items-center justify-between w-[72%] h-full max-xl:w-[90%]">
+        <div className="flex items-center justify-center gap-2.5">
           <NavbarTemplate>
-            <div className="flex items-center justify-center gap-2 py-1.5 px-2.5 max-sm:px-0">
-              <div className="w-20 max-sm:w-22">
+            <div className="flex items-center justify-center gap-2 px-2.5">
+              <div className="w-21 max-sm:w-22">
                 <img src={logo} alt="logo" />
               </div>
-              <div className="w-23 border-l border-gray-300 leading-3 max-sm:hidden">
-                <p className="text-[10px] pl-2">The everything app, for work.</p>
+              <div className="border-l border-gray-300 max-sm:hidden">
+                <p className="text-[10px] pl-2 w-22 leading-3">The everything app, for work.</p>
               </div>
             </div>
           </NavbarTemplate>
 
-         <div className="max-lg:hidden">
-         <NavbarTemplate>
-            {navItems.map((item) => (
-              <NavbarButton
-                key={item.name}
-                buttonName={item.name}
-                hasDropdown={item.hasDropdown}
-                href={item.href}
-                hideBelow={item.hideBelow as "sm" | "md" | "lg" | "xl"}
-              />
-            ))}
-          </NavbarTemplate>
-         </div>
+          <div className="max-lg:hidden">
+            <NavbarTemplate>
+              {navItems.map((item) => (
+                <NavbarButton
+                  key={item.name}
+                  buttonName={item.name}
+                  hasDropdown={item.hasDropdown}
+                  href={item.href}
+                  hideBelow={item.hideBelow as "sm" | "md" | "lg" | "xl"}
+                />
+              ))}
+            </NavbarTemplate>
+          </div>
         </div>
 
-        <div className="flex max-lg:hidden items-center justify-center gap-2">
+        <div className="flex max-lg:hidden items-center justify-center gap-2.5">
           <NavbarTemplate>
             <NavbarButton buttonName="Contact Sales" href="#" />
           </NavbarTemplate>
           <NavbarTemplate>
             <NavbarButton buttonName="Log in" href="#" />
-            <Button href="#" text="Sign Up" fontSize="15px" />
+            <Button href="#" text="Sign Up" fontSize="14px" />
           </NavbarTemplate>
         </div>
-        <div className="hidden max-lg:flex items-stretch justify-center gap-2">
-            <Button href="#" text="Sign up" fontSize="14px" />
-            <NavbarTemplate>
+        <div className="hidden max-lg:flex items-center h-full justify-center gap-2.5">
+          <Button href="#" text="Sign up" fontSize="14px" />
+          <NavbarTemplate>
+            <div className="px-2.5">
               <img src={menuIcon} alt="menu" className="w-4 h-4 " />
-            </NavbarTemplate>
-          </div>
+            </div>
+          </NavbarTemplate>
+        </div>
       </div>
     </div>
   )
