@@ -28,8 +28,8 @@ export const ProductPitch = () => {
           className="w-full md:w-[48%] lg:w-[37%] xl:w-[29%] flex flex-col rounded-2xl"
           style={{ backgroundColor: item.bgColor }}
         >
-          <div className="pt-11 px-10 max-sm:px-6 w-full rounded-lg">
-            <h2 className="text-4xl mb-2 font-bold" style={{ color: item.textColor }}>
+          <div className="pt-11 px-10 max-sm:p-6 w-full rounded-lg">
+            <h2 className="text-4xl mb-2 font-bold max-md:text-3xl" style={{ color: item.textColor }}>
               {item.title}
             </h2>
             <p className="text-md py-2" style={{ color: item.textColor }}>
