@@ -39,7 +39,7 @@ const UseCaseCard = ({
         <img
         src={image}
         alt={title}
-        className="mt-2 w-[90%] h-full object-cover rounded-lg hidden max-md:block"
+        className="mt-2 w-[90%] h-full object-cover rounded-lg hidden max-md:flex"
       />
       )}
      
@@ -86,8 +86,8 @@ export const UseCase = () => {
         />
       </div>
 
-      <div className="flex max-md:flex-col justify-center gap-5 sm:w-full mx-5">
-        <div className="flex flex-col gap-4 xl:w-[45%] md:w-[60%]">
+      <div className="flex max-md:flex-col justify-center gap-5 max-lg:w-[90%] w-[70%]">
+        <div className="flex flex-col gap-4">
           {useCaseCards.map((card, index) => (
             <UseCaseCard
               key={index}
