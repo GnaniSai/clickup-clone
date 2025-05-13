@@ -9,7 +9,7 @@ type NavbarTemplateProps = {
 
 const NavbarTemplate = ({ children }: NavbarTemplateProps) => {
   return (
-    <div className="p-1 bg-white flex items-center justify-center h-[47px] max-sm:h-[42px] gap-1 border rounded-[15px] border-[#ceceea] shadow-[0_4px_6px_0_rgba(67,46,134,0.04)]">
+    <div className="p-1 bg-white flex items-center justify-center h-[47px] max-sm:h-[42px] max-md:rounded-[13px] gap-1 border rounded-[15px] border-[#ceceea] shadow-sm">
       {children}
     </div>
   )
