@@ -24,7 +24,7 @@ const UseCaseCard = ({
     >
       <h3
         className={`text-lg ${isOpen ? "text-[#7612fa]" : "text-gray-400 hover:text-black"
-          } font-bold pt-2`}
+          } font-bold pt-2 whitespace-nowrap`}
         onClick={onClick}
       >
         {title}
@@ -86,7 +86,7 @@ export const UseCase = () => {
         />
       </div>
 
-      <div className="flex max-md:flex-col justify-center gap-5 max-lg:w-[90%] w-[70%]">
+      <div className="flex max-md:flex-col justify-center gap-10 max-lg:w-[90%] w-[70%]">
         <div className="flex flex-col gap-4">
           {useCaseCards.map((card, index) => (
             <UseCaseCard
@@ -96,7 +96,7 @@ export const UseCase = () => {
               isOpen={openIndex === index}
               image={card.image}
               onClick={() =>
-                setOpenIndex(openIndex === index ? null : index)
+                setOpenIndex(openIndex === index ? 0 : index)
               }
             />
           ))}
