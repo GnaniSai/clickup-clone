@@ -62,7 +62,7 @@ export const UseCase = () => {
 
   return (
     <div className="flex flex-col items-center justify-center gap-10 my-20">
-      <div className="text-center">
+      <div className="text-center max-md:mx-5">
         <SectionHighlight
           subtitle="The all-in-one workspace"
           title="Do your most important work, faster"
@@ -75,7 +75,7 @@ export const UseCase = () => {
         />
       </div>
 
-      <div className="flex max-lg:flex-col justify-center gap-10">
+      <div className="flex max-lg:flex-col justify-center gap-10 max-xl:mx-25 max-sm:mx-5 mx-55">
         <div className="flex flex-col flex-1 gap-4 my-2 ">
           {useCaseCards.map((card, index) => (
             <UseCaseCard

@@ -35,7 +35,7 @@ export const SmartTools = () => {
             </div>
             {smartToolsData.map((item, index) => {
                 return (
-                    <div className="px-10 mt-10 max-sm:px-5" key={index}>
+                    <div className="px-10 mt-10 max-sm:px-0" key={index}>
                         <div className={`flex justify-center max-lg:flex-col items-center gap-10 ${index % 2 !== 0 ? "flex-row-reverse" : "flex-row"}`}>
                             <div className="rounded-2xl flex-1 border border-[#7612fa52] w-full">
                                 <img src={item.image} alt="clickup brain" className="w-full h-full rounded-2xl" />

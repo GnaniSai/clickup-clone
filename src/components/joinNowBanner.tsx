@@ -15,21 +15,21 @@ export const JoinNowBanner = () => {
       
         <div className="bg-black relative rounded-2xl  flex flex-col md:flex-row justify-between overflow-hidden">
           <div className="px-13 py-16 max-lg:px-5 max-lg:py-10 flex flex-col gap-5 z-10 w-full">
-            <div className="w-[180px] max-lg:w-[100px]">
+            <div className="w-[180px] max-lg:w-[130px]">
               <img src={logo} alt="logo" className="w-full" />
             </div>
-            <h3 className="text-white text-[40px] leading-[48px] font-extrabold">
+            <h3 className="text-white text-[40px] leading-[48px] max-md:text-[25px] max-md:leading-[30px] font-extrabold">
               Supercharge your productivity
             </h3>
-            <p className="text-white text-[18px] leading-[25px] font-medium">
+            <p className="text-white text-[18px] leading-[25px] max-md:text-[14px] max-md:leading-[20px] font-medium">
               Organize tasks, collaborate on docs, track goals, and streamline team
               communication—all in one place, enhanced by AI.
             </p>
-            <div className="mt-10">
+            <div className="mt-10 max-md:mt-5">
               <Button
                 href="#"
                 text="Get started. It’s FREE"
-                fontSize="18px"
+                fontSize="16px"
                 bgColor="white"
                 color="black"
                 withArrow={true}
