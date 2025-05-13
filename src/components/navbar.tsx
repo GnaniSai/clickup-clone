@@ -25,11 +25,13 @@ const NavbarButton = ({ buttonName, hasDropdown = false, href }: NavbarButtonPro
   const content = (
     <>
       <span className="text-sm text-[#24223e]">{buttonName}</span>
-      {hasDropdown && <img src={downArrow} alt="dropdown" className="w-5 h-5" />}
+      {hasDropdown && <div className="w-5 h-5 ">
+        <img src={downArrow} alt="dropdown" className="w-full h-full"/>
+      </div>}
     </>
   )
   const baseClasses =
-    "flex items-center justify-center text-md hover:bg-gray-100 px-[12px] whitespace-nowrap rounded-lg cursor-pointer gap-1"
+    "flex items-center justify-center text-md h-full hover:bg-gray-100 px-[10px] box-border whitespace-nowrap rounded-lg cursor-pointer"
   return href ? (
     <a href={href} className={baseClasses}>
       {content}
