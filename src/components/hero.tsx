@@ -15,7 +15,7 @@ export const Hero = () => {
                 />
             </div>
 
-            <h2 className="text-6xl font-extrabold text-[#24223e] max-md:text-[33px] leading-[40px] text-center">
+            <h2 className="text-6xl font-extrabold text-[#24223e] max-md:text-[33px] max-md:leading-[40px] text-center">
                 The everything app, for work.
             </h2>
             <p className="text-lg max-md:hidden text-center text-[#24223e] font-medium w-full py-4">

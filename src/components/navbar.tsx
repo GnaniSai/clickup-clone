@@ -9,7 +9,7 @@ type NavbarTemplateProps = {
 
 const NavbarTemplate = ({ children }: NavbarTemplateProps) => {
   return (
-    <div className="p-1 bg-white flex items-center justify-center h-[47px] max-sm:h-[42px] max-md:rounded-[13px] gap-1 border rounded-[15px] border-[#ceceea] shadow-sm">
+    <div className="p-1 bg-white flex items-center justify-center h-[47px] max-sm:h-[42px] max-md:rounded-[13px] gap-1 border rounded-[15px] border-[#ceceea] max-md:shadow-sm">
       {children}
     </div>
   )
@@ -18,23 +18,20 @@ const NavbarTemplate = ({ children }: NavbarTemplateProps) => {
 type NavbarButtonProps = {
   buttonName: string
   hasDropdown?: boolean
-  href?: string
-  hideBelow?: "sm" | "md" | "lg" | "xl"
+  href?: string 
 }
 
-const NavbarButton = ({ buttonName, hasDropdown = false, href, hideBelow }: NavbarButtonProps) => {
+const NavbarButton = ({ buttonName, hasDropdown = false, href }: NavbarButtonProps) => {
   const content = (
     <>
       <span className="text-sm text-[#24223e]">{buttonName}</span>
       {hasDropdown && <img src={downArrow} alt="dropdown" className="w-5 h-5" />}
     </>
   )
-
   const baseClasses =
     "flex items-center justify-center text-md hover:bg-gray-100 px-[12px] whitespace-nowrap rounded-lg cursor-pointer gap-1"
-  const responsiveClass = `max-${hideBelow}:hidden`;
   return href ? (
-    <a href={href} className={`${baseClasses} ${responsiveClass}`}>
+    <a href={href} className={baseClasses}>
       {content}
     </a>
   ) : (
@@ -47,13 +44,13 @@ export const Navbar = () => {
     { name: "Product", hasDropdown: true },
     { name: "Solutions", hasDropdown: true },
     { name: "Resources", hasDropdown: true },
-    { name: "Pricing", href: "#", hideBelow: "lg" },
-    { name: "Enterprise", href: "#", hideBelow: "xl" },
+    { name: "Pricing", href: "#" },
+    { name: "Enterprise", href: "#" },
   ]
 
   return (
     <div className="flex justify-center min-h-20 items-center w-full sticky top-0 z-20">
-      <div className="flex items-center justify-between w-[72%] h-full max-xl:w-[90%]">
+     <div className="flex items-center justify-between h-full gap-17 max-sm:mx-5 md:mx-7 max-lg:mx-10 mx-auto max-lg:w-full" >
         <div className="flex items-center justify-center gap-2.5">
           <NavbarTemplate>
             <div className="flex items-center justify-center gap-2 px-2.5">
@@ -74,7 +71,6 @@ export const Navbar = () => {
                   buttonName={item.name}
                   hasDropdown={item.hasDropdown}
                   href={item.href}
-                  hideBelow={item.hideBelow as "sm" | "md" | "lg" | "xl"}
                 />
               ))}
             </NavbarTemplate>
