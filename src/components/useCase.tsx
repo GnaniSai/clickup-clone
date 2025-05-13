@@ -73,7 +73,7 @@ export const UseCase = () => {
 
   return (
     <div className="flex flex-col items-center justify-center gap-10 my-20 w-full">
-      <div className="text-center">
+      <div className="text-center mx-5">
         <SectionHighlight
           subtitle="The all-in-one workspace"
           title="Do your most important work, faster"

@@ -7,7 +7,7 @@ export const SectionHighlight = ({ subtitle, title, description, children }: { s
                 {subtitle}
             </span>
             <div className="mt-2">
-                <h2 className="text-[43px] max-lg:text-[35px] max-sm:text-[30px] font-extrabold text-[#090c1d] leading-11">
+                <h2 className="text-[43px] max-lg:text-[35px] max-sm:text-[30px] font-extrabold text-[#090c1d] max-lg:leading-9 leading-12">
                     {title}
                 </h2>
             </div>

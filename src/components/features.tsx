@@ -16,9 +16,9 @@ import { Button } from "./button"
 
 const FeatureCardSmall = ({ img, title }: { img: string, title: string }) => {
   return (
-    <div className="flex flex-col shadow-feature bg-white p-3 w-full aspect-square max-md:p-2 text-[#090c1d] transition-all duration-100 ease-in-out cursor-pointer hover:border-[#7612fa] border border-transparent hover:text-[#7612fa] rounded-2xl items-center justify-center gap-2">
+    <div className="flex flex-col shadow-feature bg-white p-3 w-full aspect-square text-[#090c1d] transition-all duration-100 ease-in-out cursor-pointer hover:border-[#7612fa] border border-transparent hover:text-[#7612fa] rounded-2xl items-center justify-center gap-2">
       <img src={img} alt="download" className="w-6 h-6 max-md:w-5 max-md:h-5 object-contain" />
-      <span className="text-sm font-medium max-md:text-xs">{title}</span>
+      <span className="text-sm font-medium max-md:text-[10px]">{title}</span>
     </div>
   );
 };
@@ -33,7 +33,7 @@ const FeatureCardLarge = ({ gradientImg, bannerImg, title, icon }: { gradientImg
         <img src={bannerImg} alt="feature" className="w-full h-34 object-contain max-md:h-20" />
         <p className="flex items-center gap-2 text-xl font-extrabold max-md:text-lg">
           <img src={icon} alt="icon" className="w-6 h-6 max-md:w-5 max-md:h-5" />
-          <span className="text-2xl max-lg:text-xl max-md:text-lg max-sm:text-base">{title}</span>
+          <span className="text-2xl max-lg:text-xl max-md:text-lg max-sm:text-[13px]">{title}</span>
         </p>
       </div>
     </div>
@@ -78,10 +78,10 @@ export const Features = () => {
           <Button href='/' text='Discover all features' fontSize='18px' bgColor='black' color='white' />
         </div>} />
       </div>
-      <div className="relative px-5 mb-10 h-[63vw] max-lg:h-[70vw] max-md:h-[100vw] max-lg:w-[1300px] max-md:w-[1000px] w-full max-sm:h-[100vw] max-sm:w-[900px] flex justify-center  whitespace-nowrap items-center overflow-hidden mt-4">
+      <div className="relative px-5 mb-10 h-[63vw] max-lg:h-[70vw] max-md:h-[90vw] max-lg:w-[1300px] max-md:w-[1000px] w-full max-sm:h-[120vw] max-sm:w-[900px] flex justify-center  whitespace-nowrap items-center overflow-hidden mt-4">
         <div className="absolute inset-0 z-10 pointer-events-none vignette-bg" />
 
-        <div className="grid grid-cols-10 grid-rows-6 gap-4 w-full" style={{ boxShadow: "inset 0 0 150px 50px rgb(248,242,255)" }}>
+        <div className="grid grid-cols-10 grid-rows-6 gap-4 max-md:gap-2 w-full" style={{ boxShadow: "inset 0 0 150px 50px rgb(248,242,255)" }}>
           {Array.from({ length: 68 }).map((_, index) => {
             if ([23, 24, 37, 38].includes(index)) {
               const card = largeCards[largeCardIndex++];
