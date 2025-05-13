@@ -50,7 +50,7 @@ export const Navbar = () => {
 
   return (
     <div className="flex justify-center min-h-20 items-center w-full sticky top-0 z-20">
-     <div className="flex items-center justify-between h-full gap-17 max-sm:mx-5 md:mx-7 max-lg:mx-10 mx-auto max-lg:w-full" >
+     <div className="flex items-center justify-between h-full gap-17 max-lg:gap-5 max-sm:mx-5 max-md:mx-7 max-lg:mx-10 mx-auto max-lg:w-full" >
         <div className="flex items-center justify-center gap-2.5">
           <NavbarTemplate>
             <div className="flex items-center justify-center gap-2 px-2.5">
