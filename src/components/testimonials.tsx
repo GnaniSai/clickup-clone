@@ -67,7 +67,7 @@ export const Testimonials = () => {
 
     return (
         <div className="flex flex-col items-center justify-center my-20 max-md:hidden">
-            <div className="text-center mx-80 mt-15">
+            <div className="text-center mt-15">
                 <SectionHighlight subtitle="Testimonials" title="Don’t just take it from us" description="Loved by teams. Backed by awards. Trusted worldwide." />
             </div>
 
@@ -88,7 +88,7 @@ export const Testimonials = () => {
                 ))}
             </div>
 
-            <div className="flex items-center gap-13">
+            <div className="flex justify-between items-center w-[70%]">
                 {awards.map((award, index) => (
                     <div className="flex flex-col items-center gap-3" key={index}>
                         <p className="text-sm font-medium">{award.title}</p>

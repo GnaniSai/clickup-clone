@@ -58,8 +58,8 @@ export const TeamTemplates = () => {
         { name: "Engineering", image: marketing, hideBelow: "md" },
         { name: "Agencies", image: marketing, hideBelow: "lg" },
         { name: "See all teams", image: marketing, hideBelow: "lg" },
-      ];
-      
+    ];
+
 
     const checkBoxData = [
         "Build visual plans that keep teams on track",
@@ -87,7 +87,7 @@ export const TeamTemplates = () => {
     ];
 
     return (
-        <div className="flex flex-col items-center justify-center mx-50 max-xl:mx-20 my-20 max-md:hidden">
+        <div className="flex flex-col items-center justify-center my-20 max-md:hidden">
             <div className="text-center">
                 <SectionHighlight subtitle="Templates for teams" title="Hit the ground running" description="Templates for every team to get started instantly." />
             </div>
@@ -102,7 +102,7 @@ export const TeamTemplates = () => {
                 ))}
             </div>
 
-            <div className="bg-white rounded-xl border border-[#6060a34d] my-7">
+            <div className="bg-white rounded-xl border border-[#6060a34d] my-7 md:w-[80%] xl:w-[72%]">
                 <div className="flex items-center max-lg:flex-col justify-between">
                     <div className="pl-15 py-10">
                         <div>

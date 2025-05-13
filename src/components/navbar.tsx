@@ -9,7 +9,7 @@ type NavbarTemplateProps = {
 
 const NavbarTemplate = ({ children }: NavbarTemplateProps) => {
   return (
-    <div className="p-1 bg-white flex items-center justify-center h-[47px] max-md:h-[42px] max-md:rounded-[13px] gap-1 border rounded-[15px] border-[#ceceea] max-md:shadow-sm">
+    <div className="p-[5px] bg-white flex items-center justify-center h-[47px] max-md:h-[42px] max-md:rounded-[13px] gap-1 border rounded-[15px] border-[#ceceea] max-md:shadow-sm">
       {children}
     </div>
   )
@@ -18,7 +18,7 @@ const NavbarTemplate = ({ children }: NavbarTemplateProps) => {
 type NavbarButtonProps = {
   buttonName: string
   hasDropdown?: boolean
-  href?: string 
+  href?: string
 }
 
 const NavbarButton = ({ buttonName, hasDropdown = false, href }: NavbarButtonProps) => {
@@ -26,7 +26,7 @@ const NavbarButton = ({ buttonName, hasDropdown = false, href }: NavbarButtonPro
     <>
       <span className="text-sm text-[#24223e]">{buttonName}</span>
       {hasDropdown && <div className="w-5 h-5 ">
-        <img src={downArrow} alt="dropdown" className="w-full h-full"/>
+        <img src={downArrow} alt="dropdown" className="w-full h-full" />
       </div>}
     </>
   )
@@ -52,7 +52,7 @@ export const Navbar = () => {
 
   return (
     <div className="flex justify-center min-h-20 items-center w-full sticky top-0 z-20">
-     <div className="flex items-center justify-between h-full gap-17 max-lg:gap-5 max-sm:mx-5 max-md:mx-7 max-lg:mx-10 mx-auto max-lg:w-full" >
+      <div className="flex items-center justify-between h-full gap-20 max-lg:gap-5 max-sm:mx-5 max-md:mx-7 max-lg:mx-10 mx-auto max-lg:w-full" >
         <div className="flex items-center justify-center gap-2.5">
           <NavbarTemplate>
             <div className="flex items-center justify-center gap-2 px-2.5">

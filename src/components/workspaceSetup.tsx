@@ -68,9 +68,9 @@ export const WorkspaceSetup = () => {
 
 
         <div className="absolute right-20 max-xl:right-10 -top-5 z-10 w-[400px] border-2 border-white p-2 rounded-2xl max-lg:w-[380px]">
-        <div className='absolute right-0 top-0 mix-blend-overlay opacity-50 scale-200 '>
-              <img src={bgGradient1} alt="gradient" className='w-full h-full object-cover object-top' />
-            </div>
+          <div className='absolute right-0 top-0 mix-blend-overlay opacity-50 scale-200 '>
+            <img src={bgGradient1} alt="gradient" className='w-full h-full object-cover object-top' />
+          </div>
           <div className="relative px-6 py-4 rounded-xl text-center bg-white">
             <h2 className="text-xl font-bold text-[#24223e] tracking-tight">Set up your Workspace</h2>
             <p className="text-xs text-[#24223e] font-medium mt-1">

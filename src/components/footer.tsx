@@ -37,12 +37,12 @@ const KeyBenefits = () => {
                 <span className="text-black font-bold text-[12px] text-sm">The everything app, for work.</span>
             </div>
             <div className="flex items-center gap-3 pr-7 max-lg:pr-3 max-sm:hidden">
-            {keyBenefitsData.map((item, index) => (
-                <div key={index} className="flex items-center gap-3 pr-7 max-lg:pr-3">
-                    <img src={item.logo} alt="logo" className="w-5 h-5" />
-                    <a href={item.link} className="text-gray-900 text-[12px] hover:underline cursor-pointer font-medium text-sm">{item.title}</a>
-                </div>
-            ))}
+                {keyBenefitsData.map((item, index) => (
+                    <div key={index} className="flex items-center gap-3 pr-7 max-lg:pr-3">
+                        <img src={item.logo} alt="logo" className="w-5 h-5" />
+                        <a href={item.link} className="text-gray-900 text-[12px] hover:underline cursor-pointer font-medium text-sm">{item.title}</a>
+                    </div>
+                ))}
             </div>
         </div>
     );

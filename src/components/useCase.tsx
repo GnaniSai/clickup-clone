@@ -8,11 +8,13 @@ const UseCaseCard = ({
   title,
   description,
   isOpen,
+  image,
   onClick,
 }: {
   title: string;
   description: string;
   isOpen: boolean;
+  image: string;
   onClick: () => void;
 }) => {
   return (
@@ -28,10 +30,19 @@ const UseCaseCard = ({
         {title}
       </h3>
       {isOpen && (
-        <p className="text-sm mt-1 text-[#090c1d] pb-2 w-65 max-lg:w-full animate-slide-down">
+        <p className="text-sm mt-1 text-[#090c1d] pb-2 w-65 max-lg:w-full">
           {description}
         </p>
+        
       )}
+       {isOpen && (
+        <img
+        src={image}
+        alt={title}
+        className="mt-2 w-[90%] h-full object-cover rounded-lg hidden max-md:block"
+      />
+      )}
+     
     </div>
   );
 };
@@ -61,8 +72,8 @@ export const UseCase = () => {
   ];
 
   return (
-    <div className="flex flex-col items-center justify-center gap-10 my-20">
-      <div className="text-center max-md:mx-5">
+    <div className="flex flex-col items-center justify-center gap-10 my-20 w-full">
+      <div className="text-center">
         <SectionHighlight
           subtitle="The all-in-one workspace"
           title="Do your most important work, faster"
@@ -75,21 +86,22 @@ export const UseCase = () => {
         />
       </div>
 
-      <div className="flex max-lg:flex-col justify-center gap-10 max-xl:mx-25 max-sm:mx-5 mx-55">
-        <div className="flex flex-col flex-1 gap-4 my-2 ">
+      <div className="flex max-md:flex-col justify-center gap-5 sm:w-full mx-5">
+        <div className="flex flex-col gap-4 xl:w-[45%] md:w-[60%]">
           {useCaseCards.map((card, index) => (
             <UseCaseCard
               key={index}
               title={card.title}
               description={card.description}
               isOpen={openIndex === index}
+              image={card.image}
               onClick={() =>
                 setOpenIndex(openIndex === index ? null : index)
               }
             />
           ))}
         </div>
-        <div className="w-full hover:brightness-95 transition-all duration-500 cursor-pointer">
+        <div className="hover:brightness-95 transition-all duration-500 cursor-pointer max-md:hidden">
           <img
             src={useCaseCards[openIndex ?? 0]?.image}
             alt="launch cover"

@@ -17,9 +17,8 @@ export const Button = ({
   color = "white",
   bgColor = "gradient",
 }: ButtonProps) => {
-  const defaultButtonStyle = `${fontSize === "18px" ? "py-4 px-7" : "p-3"} ${
-    width === "full" ? "w-full" : "w-fit"
-  } flex items-center gap-2 justify-center h-full rounded-[10px] text-${color} bg-${bgColor} whitespace-nowrap tracking-tight font-bold shadow-[inset_0_0_0_1px_rgba(0,0,0,0.15)]`;
+  const defaultButtonStyle = `${fontSize === "18px" ? "py-4 px-7" : "p-3"} ${width === "full" ? "w-full" : "w-fit"
+    } flex items-center gap-2 justify-center h-full rounded-[10px] text-${color} bg-${bgColor} whitespace-nowrap tracking-tight font-bold shadow-[inset_0_0_0_1px_rgba(0,0,0,0.15)]`;
 
 
   const gradient =
