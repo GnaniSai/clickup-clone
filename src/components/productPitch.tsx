@@ -16,34 +16,43 @@ export const ProductPitch = () => {
       video: video2,
       bgColor: 'black',
       textColor: 'white',
-      button: <Button href='/' text='Get Started' fontSize='16px' bgColor='white' color='black'  withArrow={true}/>,
-      span: <span className='text-xs text-gray-600'>converge over 50+
-different apps</span>
+      button: <Button href='/' text='Get Started' fontSize='16px' bgColor='white' color='black' withArrow={true} />,
+      span: <span className='text-xs text-gray-600'>converge over 50+ <br /> different apps</span>
     }
   ]
   return (
-    <div className="flex items-stretch max-md:flex-col max-md:items-center justify-center gap-5 max-md:my-10 my-30 max-sm:mx-5">
-    {productPitch.map((item,index)=>{
-      return(
-        <div className="flex flex-col w-[430px] max-sm:w-[350px] max-md:w-[380px] rounded-2xl" key={index} style={{backgroundColor: item.bgColor}}>
-        <div className="pt-11 px-10 max-sm:px-6 w-full rounded-lg">
-            <h2 className="text-4xl mb-2 font-bold" style={{color: item.textColor}}>
-            {item.title}
+    <div className="flex flex-wrap justify-center w-full gap-5 max-md:flex-col max-md:items-center my-30 max-md:my-10 max-md:px-5">
+      {productPitch.map((item, index) => (
+        <div
+          key={index}
+          className="w-full md:w-[48%] lg:w-[37%] xl:w-[29%] flex flex-col rounded-2xl"
+          style={{ backgroundColor: item.bgColor }}
+        >
+          <div className="pt-11 px-10 max-sm:px-6 w-full rounded-lg">
+            <h2 className="text-4xl mb-2 font-bold" style={{ color: item.textColor }}>
+              {item.title}
             </h2>
-            <p className="text-md py-2" style={{color: item.textColor}}>
-            {item.description}
+            <p className="text-md py-2" style={{ color: item.textColor }}>
+              {item.description}
             </p>
-            <div className='flex items-center gap-3 my-5'>
+            <div className="flex items-center gap-3 my-5">
               {item.button}
               {item.span}
             </div>
+          </div>
+          <div className="rounded-b-2xl w-full overflow-hidden">
+            <video
+              src={item.video}
+              className="w-full h-full object-cover object-center"
+              autoPlay
+              muted
+              loop
+            ></video>
+          </div>
         </div>
-        <div className='rounded-b-2xl w-full h-[400px] max-lg:h-[350px] max-md:h-[320px] overflow-hidden'>
-            <video src={item.video} className='w-full h-full object-cover object-center' autoPlay muted loop></video>
-        </div>
-     </div>
-      )
-    })}
+      ))}
     </div>
+
+
   );
 };

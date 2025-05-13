@@ -17,14 +17,12 @@ const UseCaseCard = ({
 }) => {
   return (
     <div
-      className={`border-l-2 ${
-        isOpen ? "border-[#7612fa]" : "border-gray-200"
-      } duration-300 ease-in-out cursor-pointer pl-5`}
+      className={`border-l-2 ${isOpen ? "border-[#7612fa]" : "border-gray-200"
+        } duration-300 ease-in-out cursor-pointer pl-5`}
     >
       <h3
-        className={`text-lg ${
-          isOpen ? "text-[#7612fa]" : "text-gray-400 hover:text-black"
-        } font-bold pt-2`}
+        className={`text-lg ${isOpen ? "text-[#7612fa]" : "text-gray-400 hover:text-black"
+          } font-bold pt-2`}
         onClick={onClick}
       >
         {title}
@@ -39,7 +37,7 @@ const UseCaseCard = ({
 };
 
 export const UseCase = () => {
-  const [openIndex, setOpenIndex] = useState<number | null>(0); 
+  const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   const useCaseCards = [
     {
@@ -70,14 +68,14 @@ export const UseCase = () => {
           title="Do your most important work, faster"
           description="From campaigns to operations and more, this is just the tip of the iceberg."
           children={
-              <div className="flex justify-center mt-5">
-              <Button href='/' text='See all use cases' fontSize='16px' bgColor='black' color='white'  withArrow={true}/>
+            <div className="flex justify-center mt-5">
+              <Button href='/' text='See all use cases' fontSize='16px' bgColor='black' color='white' withArrow={true} />
             </div>
           }
         />
       </div>
 
-      <div className="flex max-lg:flex-col justify-center gap-10 max-xl:mx-25 max-sm:mx-5 mx-55">
+      <div className="flex max-lg:flex-col justify-center gap-10">
         <div className="flex flex-col flex-1 gap-4 my-2 ">
           {useCaseCards.map((card, index) => (
             <UseCaseCard
