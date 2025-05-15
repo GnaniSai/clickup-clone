@@ -36,8 +36,7 @@ export const JoinNowBanner = () => {
           className="absolute right-0 top-0  h-full object-cover z-0"
         />
 
-        <div className="relative w-full flex items-end rounded-br-2xl overflow-hidden z-10">
-
+        <div className="relative w-full flex items-end justify-end rounded-br-2xl overflow-hidden z-10">
           <div className="relative z-10 pl-2 pt-2 mt-10 ml-10 border-t border-l border-white rounded-tl-3xl rounded-br-2xl">
             <img
               src={supercharge}

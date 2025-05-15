@@ -25,9 +25,13 @@ export const Hero = () => {
                 One app to align, collaborate, and work. Designed to boost productivity and save teams a day every week.
             </p>
 
-            <div className="py-3 flex flex-col gap-2 items-center justify-center">
-                <Button href="#" text="Get started. It's FREE!" fontSize="18px" />
-
+           <div className="py-3 flex flex-col gap-2 items-center justify-center">
+                <div className="max-md:hidden">
+                    <Button href="#" text="Get started. It's FREE!" fontSize="18px" />
+                </div>
+                <div className="max-md:flex hidden">
+                    <Button href="#" text="Get started. It's FREE!" fontSize="17px" withArrow />
+                </div>
                 <span className="text-xs text-gray-500 font-medium">
                     Free Forever. No Credit Card.
                 </span>

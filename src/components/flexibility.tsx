@@ -111,7 +111,7 @@ export const Flexibility = () => {
 
         <div className="col-span-2 rounded-2xl max-lg:hidden">
           <div className="bg-[linear-gradient(351deg,_#5037E7_12.36%,_#EB00FF_124.69%)] px-10 pt-8 pb-5 relative flex justify-between gap-20 rounded-2xl">
-            <div className="text-white rounded-2xl">
+            <div className="text-white w-[50%] rounded-2xl">
               <div>
                 <h3 className="text-xl font-bold mb-2">Plays well with others</h3>
                 <span className="text-[16px] my-5">
@@ -122,10 +122,10 @@ export const Flexibility = () => {
                 <img src={clickupIntegration1} alt="clickupIntegration1" className="w-full h-full object-cover rounded-2xl" />
               </div>
             </div>
-            <div className="absolute top-0 left-[26%] w-fit h-full">
+            <div className="absolute top-0 left-[28%] h-full">
               <img src={separator} alt="separator" className="w-full h-full object-cover rounded-2xl" />
             </div>
-            <div className="text-white rounded-2xl">
+            <div className="text-white w-[50%] rounded-2xl">
               <div>
                 <h3 className="text-xl font-bold mb-2">Replaces them entirely</h3>
                 <span className="text-[16px] my-5">

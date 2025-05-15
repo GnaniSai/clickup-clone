@@ -83,7 +83,7 @@ export const Features = () => {
     },
   ]
 
-  const gridData = [
+const gridData = [
     {
       title: "Dependencies",
       icon: dependencies
@@ -257,12 +257,12 @@ export const Features = () => {
       icon: dependencies
     },
     {
-      title: "Connected Search",
-      icon: search
+      title: "AI Writer",
+      icon: notes
     },
     {
-      title: "Tasks",
-      icon: tick
+      title: "Dependencies",
+      icon: dependencies
     },
     {
       title: "Mind Maps",
@@ -293,20 +293,12 @@ export const Features = () => {
       icon: bag
     },
     {
-      title: "Remainders",
-      icon: bell
+      title: "Dependencies",
+      icon: dependencies
     },
     {
-      title: "Reporting",
-      icon: pie
-    },
-    {
-      title: "Custom Status",
-      icon: status
-    },
-    {
-      title: "AI Writer",
-      icon: notes
+      title: "Connected Search",
+      icon: search
     },
     {
       title: "Tasks",
@@ -323,6 +315,14 @@ export const Features = () => {
     {
       title: "AI Notetaker",
       icon: notes
+    },
+    {
+      title: "Calendar",
+      icon: calendar
+    },
+    {
+      title: "Portfolio",
+      icon: folder
     },
     {
       title: "Templates",
@@ -353,11 +353,9 @@ export const Features = () => {
       icon: notes
     },
     {
-      title: "Dependencies",
-      icon: dependencies
+      title: "Wikis",
+      icon: link
     },
-
-
   ]
   let largeCardIndex = 0;
   return (
@@ -370,7 +368,7 @@ export const Features = () => {
       <div className="relative px-5 mb-10 h-[63vw] max-lg:h-[70vw] max-md:h-[90vw] max-lg:w-[1300px] max-md:w-[1000px] w-full max-sm:h-[120vw] max-sm:w-[900px] flex justify-center  whitespace-nowrap items-center overflow-hidden mt-4">
         <div className="absolute inset-0 z-10 pointer-events-none vignette-bg" />
 
-        <div className="grid grid-cols-10 grid-rows-6 gap-4 max-md:gap-2 w-full" style={{ boxShadow: "inset 0 0 150px 50px rgb(248,242,255)" }}>
+        <div className="grid grid-cols-10 grid-rows-8 gap-4 max-md:gap-2 w-full" style={{ boxShadow: "inset 0 0 150px 50px rgb(248,242,255)" }}>
           {gridData.map((item, index) => {
             if ([23, 24, 37, 38].includes(index)) {
               const card = largeCards[largeCardIndex++];

@@ -79,7 +79,7 @@ export const UseCase = () => {
           description="From campaigns to operations and more, this is just the tip of the iceberg."
           children={
             <div className="flex justify-center mt-5">
-              <Button href='/' text='See all use cases' fontSize='16px' bgColor='black' color='white' withArrow={true} />
+              <Button href='#' text='See all use cases' fontSize='16px' bgColor='black' color='white' withArrow={true} />
             </div>
           }
         />
@@ -100,7 +100,7 @@ export const UseCase = () => {
             />
           ))}
         </div>
-        <div className="hover:brightness-95 transition-all duration-500 cursor-pointer max-md:hidden">
+        <div className="hover:brightness-95 transition-all w-full duration-500 cursor-pointer max-md:hidden">
           <img
             src={useCardsData[openIndex || 0].image}
             alt="launch cover"

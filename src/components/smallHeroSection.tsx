@@ -54,9 +54,9 @@ export const SmallHeroSection = () => {
         </div>
 
         <div className="flex items-center gap-2 my-2">
-          <img src={stars} alt="stars" className="h-5" />
+          <img src={stars} alt="stars" className="w-22" />
           <span className="text-xs text-gray-600">25,000+ reviews from</span>
-          <img src={reviews} alt="reviews" className="h-3" />
+          <img src={reviews} alt="reviews" className="w-22" />
         </div>
       </div>
     </>

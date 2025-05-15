@@ -76,7 +76,7 @@ const WorkflowItem = ({ icon, text }: { icon: string, text: string }) => {
 
 const ReviewCard = ({ title, description, image, brand, review, checkBoxData }: { title: string, description: string, image: string, brand: string, review: string[], checkBoxData: string[] }) => {
     return (
-        <div className="pl-15 py-10">
+        <div className="pl-15 py-10 w-[50%] max-lg:w-full">
             <div>
                 <h3 className="text-[20px] font-bold">
                     {title}
@@ -111,7 +111,7 @@ export const TeamTemplates = () => {
         { name: "PMO", image: pmo },
         { name: "Marketing", image: marketing },
         { name: "Product", image: product },
-        { name: "Engineering", image: engineering, hideBelow: "md" },
+        { name: "Engineering", image: engineering, hideBelow: "lg" },
         { name: "Agencies", image: agencies, hideBelow: "lg" },
         { name: "See all teams", image: seeallteams, href: "#" },
     ];
@@ -225,8 +225,8 @@ export const TeamTemplates = () => {
                     {review && (
                         <ReviewCard title={review.title} description={review.description} image={review.image} brand={review.brand} review={review.review} checkBoxData={review.checkBoxData} />
                     )}
-                    <div className="px-10 pt-10 ml-10 max-lg:ml-0">
-                        <div className="flex flex-col border border-[#6060a34d] rounded-xl divide-y w-max divide-[#6060a34d] box-border justify-self-end">
+                    <div className="px-10 pt-10 w-[50%] max-lg:w-full">
+                        <div className="flex flex-col border border-[#6060a34d] rounded-xl divide-y w-full divide-[#6060a34d] box-border justify-self-end">
                             {workflowItemsData.map((item) => (
                                 <WorkflowItem key={item.text} icon={item.icon} text={item.text} />
                             ))}
