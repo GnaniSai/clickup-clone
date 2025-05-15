@@ -47,7 +47,7 @@ const FeatureCardLarge = ({ gradientImg, bannerImg, title, icon }: { gradientImg
         <img src={bannerImg} alt="feature" className="w-full h-34 object-contain max-md:h-20" />
         <p className="flex items-center gap-2 text-xl font-extrabold max-md:text-lg">
           <img src={icon} alt="icon" className="w-6 h-6 max-md:w-5 max-md:h-5" />
-          <span className="text-2xl max-lg:text-xl max-md:text-lg max-sm:text-[13px] text-[#090c1d]">{title}</span>
+          <span className="text-2xl max-lg:text-xl max-md:text-lg max-sm:text-[13px]">{title}</span>
         </p>
       </div>
     </div>
