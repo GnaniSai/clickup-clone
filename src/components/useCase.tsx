@@ -1,48 +1,47 @@
 import { SectionHighlight } from "./sectionHighlight";
-import launchCover1 from "../assets/launch-cover.avif";
-import launchCover2 from "../assets/launch-cover2.avif";
-import launchCover3 from "../assets/launch-cover3.avif";
+import launchCover1 from "../assets/useCase/launch-cover.avif";
+import launchCover2 from "../assets/useCase/launch-cover2.avif";
+import launchCover3 from "../assets/useCase/launch-cover3.avif";
 import { useState } from "react";
 import { Button } from "./button";
 const UseCaseCard = ({
   title,
   description,
-  isOpen,
   image,
-  onClick,
+  isOpen,
+  onClick
 }: {
   title: string;
   description: string;
-  isOpen: boolean;
   image: string;
-  onClick: () => void;
+  isOpen: boolean | number;
+  onClick: () => void
 }) => {
   return (
     <div
-      className={`border-l-2 ${isOpen ? "border-[#7612fa]" : "border-gray-200"
-        } duration-300 ease-in-out cursor-pointer pl-5`}
+      className={`border-l-2 ${isOpen ? "border-[#7612fa]" : "border-gray-200"}
+        duration-300 ease-in-out cursor-pointer pl-5`}
     >
       <h3
-        className={`text-lg ${isOpen ? "text-[#7612fa]" : "text-gray-400 hover:text-black"
-          } font-bold pt-2 whitespace-nowrap`}
-        onClick={onClick}
+        className={`text-lg ${isOpen ? "text-[#7612fa]" : "text-gray-400 hover:text-black"}
+          font-bold pt-2 whitespace-nowrap`} onClick={onClick}
       >
         {title}
       </h3>
+
       {isOpen && (
         <p className="text-sm mt-1 text-[#090c1d] pb-2 w-65 max-lg:w-full">
           {description}
         </p>
-        
+
       )}
-       {isOpen && (
+      {isOpen && (
         <img
-        src={image}
-        alt={title}
-        className="mt-2 w-[90%] h-full object-cover rounded-lg hidden max-md:flex"
-      />
+          src={image}
+          alt={title}
+          className="mt-2 w-[90%] h-full object-cover rounded-lg hidden max-md:flex"
+        />
       )}
-     
     </div>
   );
 };
@@ -50,26 +49,26 @@ const UseCaseCard = ({
 export const UseCase = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
-  const useCaseCards = [
+  const useCardsData = [
     {
       title: "Launch any campaign",
       description:
         "From idea to execution, effortlessly plan, organize, and track campaigns that deliver results.",
-      image: launchCover1,
+      image: launchCover1
     },
     {
       title: "Triage product issues",
       description:
         "Quickly identify, prioritize, and resolve critical issues to keep your team, and users, on track.",
-      image: launchCover2,
+      image: launchCover2
     },
     {
       title: "Maintain flawless operations",
       description:
         "Streamline key processes to ensure your team operates at peak efficiency.",
-      image: launchCover3,
+      image: launchCover3
     },
-  ];
+  ]
 
   return (
     <div className="flex flex-col items-center justify-center gap-10 my-20 w-full">
@@ -88,13 +87,13 @@ export const UseCase = () => {
 
       <div className="flex max-md:flex-col justify-center gap-10 max-lg:w-[90%] w-[70%]">
         <div className="flex flex-col gap-4">
-          {useCaseCards.map((card, index) => (
+          {useCardsData.map((card, index) => (
             <UseCaseCard
               key={index}
               title={card.title}
               description={card.description}
-              isOpen={openIndex === index}
               image={card.image}
+              isOpen={openIndex === index}
               onClick={() =>
                 setOpenIndex(openIndex === index ? 0 : index)
               }
@@ -103,7 +102,7 @@ export const UseCase = () => {
         </div>
         <div className="hover:brightness-95 transition-all duration-500 cursor-pointer max-md:hidden">
           <img
-            src={useCaseCards[openIndex ?? 0]?.image}
+            src={useCardsData[openIndex || 0].image}
             alt="launch cover"
             className="w-full h-full object-cover rounded-lg"
           />

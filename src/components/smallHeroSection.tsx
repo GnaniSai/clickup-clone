@@ -1,18 +1,18 @@
 import { Button } from './button'
-import reviews from '../assets/reviews.svg'
-import stars from '../assets/stars.png'
-import chat from "../assets/chat.svg"
-import docs from "../assets/docs.svg"
-import whiteboard from "../assets/whiteboard.svg"
-import sprints from "../assets/project-icon.svg"
-import tasks from "../assets/tasks.svg"
-import dashboard from "../assets/dashboards.svg"
-import forms from "../assets/forms.svg"
-import gantt from "../assets/gantt.svg"
-import timeTracking from "../assets/time-tracking.svg"
-import ai from "../assets/ai.svg"
-import automation from "../assets/automations.svg"
-import calendar from "../assets/calendar.svg"
+import reviews from '../assets/hero/reviews.svg'
+import stars from '../assets/hero/stars.png'
+import chat from "../assets/hero/chat.svg"
+import docs from "../assets/hero/docs.svg"
+import whiteboard from "../assets/hero/whiteboard.svg"
+import sprints from "../assets/hero/project-icon.svg"
+import tasks from "../assets/hero/tasks.svg"
+import dashboard from "../assets/hero/dashboards.svg"
+import forms from "../assets/hero/forms.svg"
+import gantt from "../assets/hero/gantt.svg"
+import timeTracking from "../assets/hero/time-tracking.svg"
+import ai from "../assets/hero/ai.svg"
+import automation from "../assets/hero/automations.svg"
+import calendar from "../assets/hero/calendar.svg"
 
 export const SmallHeroSection = () => {
   const data = [

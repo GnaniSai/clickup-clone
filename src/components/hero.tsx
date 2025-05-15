@@ -1,17 +1,17 @@
 import { Button } from "./button";
 import { WorkspaceSetup } from "./workspaceSetup";
-import bgGradient2 from "../assets/bgGradient2.svg";
+import bgGradient2 from "../assets/hero/bgGradient2.svg";
 
 export const Hero = () => {
 
     return (
-        <div className="relative flex flex-col items-center max-sm:mx-3 my-20 max-md:my-10 max-sm:my-7 justify-center overflow-hidden">
+        <div className="relative flex flex-col items-center max-sm:mx-3 my-20 max-md:my-10 max-sm:my-7 justify-center vignette-bg-2 overflow-hidden">
 
-            <div className="absolute inset-9 z-10 top-40 mix-blend-overlay pointer-events-none max-md:hidden select-none">
+            <div className="absolute inset-0 -z-10 pointer-events-none max-md:hidden select-none">
                 <img
                     src={bgGradient2}
                     alt="background"
-                    className="w-full h-full object-cover object-center opacity-50 scale-125"
+                    className="w-full h-full object-cover object-center opacity-70 scale-115"
                 />
             </div>
 

@@ -1,12 +1,12 @@
-import company1 from '../assets/company1.svg'
-import company2 from '../assets/company2.svg'
-import company3 from '../assets/company3.svg'
-import company4 from '../assets/company4.svg'
-import company5 from '../assets/company5.svg'
-import company6 from '../assets/company6.svg'
-import company7 from '../assets/company7.svg'
-import company8 from '../assets/company8.svg'
-import noise from '../assets/noise.png'
+import company1 from '../assets/trusted/company1.svg'
+import company2 from '../assets/trusted/company2.svg'
+import company3 from '../assets/trusted/company3.svg'
+import company4 from '../assets/trusted/company4.svg'
+import company5 from '../assets/trusted/company5.svg'
+import company6 from '../assets/trusted/company6.svg'
+import company7 from '../assets/trusted/company7.svg'
+import company8 from '../assets/trusted/company8.svg'
+import noise from '../assets/trusted/noise.png'
 
 const companies = [company1, company2, company3, company4, company5, company6, company7, company8]
 

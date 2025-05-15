@@ -1,29 +1,33 @@
-import logo from "../assets/logo-v3-clickup-symbol-only.svg";
-import facebook from "../assets/facebook.svg";
-import instagram from "../assets/instagram.svg";
-import twitter from "../assets/twitter.svg";
-import linkedin from "../assets/linkedin.svg";
-import apple from "../assets/app-store-badge-black.svg";
-import google from "../assets/google-play-badge-black.svg";
-import microsoft from "../assets/app-store-microsoft-badge-black.svg";
+import logo from "../assets/socials/logo-v3-clickup-symbol-only.svg";
+import calendarClock from "../assets/socials/calendar-clock.png";
+import padlock from "../assets/socials/padlock.png";
+import dashboard from "../assets/socials/dashboard.png";
+import flash from "../assets/socials/flash.png";
+import facebook from "../assets/socials/facebook.svg";
+import instagram from "../assets/socials/instagram.svg";
+import twitter from "../assets/socials/twitter.svg";
+import linkedin from "../assets/socials/linkedin.svg";
+import apple from "../assets/socials/app-store-badge-black.svg";
+import google from "../assets/socials/google-play-badge-black.svg";
+import microsoft from "../assets/socials/app-store-microsoft-badge-black.svg";
 const keyBenefitsData = [
     {
-        logo: logo,
+        logo: calendarClock,
         title: "24/7 support",
         link: "#"
     },
     {
-        logo: logo,
+        logo: flash,
         title: "Weekly updates",
         link: "#"
     },
     {
-        logo: logo,
+        logo: padlock,
         title: "Secure and compliant",
         link: "#"
     },
     {
-        logo: logo,
+        logo: dashboard,
         title: "99.9% uptime",
         link: "#"
     },
@@ -31,16 +35,16 @@ const keyBenefitsData = [
 
 const KeyBenefits = () => {
     return (
-        <div className="flex mx-50 max-md:flex-col max-xl:mx-20 max-sm:mx-5 items-center gap-10 ">
-            <div className="flex items-center gap-3 pr-6 max-lg:pr-3 max-sm:p-0">
+        <div className="flex mx-50 max-md:flex-col max-xl:mx-20 max-sm:mx-5 max-md:gap-5 items-center md:divide-x divide-gray-300">
+            <div className="flex items-center gap-3 pr-5 max-lg:px-3 max-sm:p-0">
                 <img src={logo} alt="logo" className="w-5 h-5" />
                 <span className="text-black font-bold text-[12px] text-sm">The everything app, for work.</span>
             </div>
-            <div className="flex items-center gap-3 pr-7 max-lg:pr-3 max-sm:hidden">
+            <div className="flex items-center max-sm:hidden divide-x divide-gray-300">
                 {keyBenefitsData.map((item, index) => (
-                    <div key={index} className="flex items-center gap-3 pr-7 max-lg:pr-3">
-                        <img src={item.logo} alt="logo" className="w-5 h-5" />
-                        <a href={item.link} className="text-gray-900 text-[12px] hover:underline cursor-pointer font-medium text-sm">{item.title}</a>
+                    <div key={index} className="flex items-center gap-3 px-10 max-lg:px-3">
+                        <img src={item.logo} alt="logo" className="w-4 h-4" />
+                        <a href={item.link} className="text-gray-500 text-[12px] hover:underline cursor-pointer font-medium text-sm">{item.title}</a>
                     </div>
                 ))}
             </div>

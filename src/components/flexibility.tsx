@@ -1,10 +1,12 @@
 import { useState } from "react";
 import { SectionHighlight } from "./sectionHighlight";
-import viewWork from "../assets/view-work.png";
-import clock from "../assets/clock.svg";
-import separator from "../assets/separator.png";
-import clickupIntegration1 from "../assets/clickup-integrations.svg";
-import clickupIntegration2 from "../assets/clickup-integration-replaces.svg";
+import viewWork from "../assets/flexibility/view-work.png";
+import clock from "../assets/flexibility/clock.svg";
+import separator from "../assets/flexibility/separator.png";
+import clickupIntegration1 from "../assets/flexibility/clickup-integrations.svg";
+import clickupIntegration2 from "../assets/flexibility/clickup-integration-replaces.svg";
+import puzzle from "../assets/flexibility/puzzle.png";
+import sprints from "../assets/flexibility/calendar.png";
 
 const Toggle = ({ onClick, isEnabled }: { onClick: () => void, isEnabled: boolean }) => {
   return (
@@ -42,20 +44,18 @@ const FlexibilityCards = ({
 };
 
 export const Flexibility = () => {
-  const [toggles, setToggles] = useState<{ [key: number]: boolean }>({ 0: false, 1: true, 2: false });
+
+  const [customizeClickData, setCustomizeClickData] = useState([
+    { icon: clock, title: "Time Tracking", isEnabled: false },
+    { icon: sprints, title: "Sprints", isEnabled: true },
+    { icon: puzzle, title: "Custom Fields", isEnabled: false },
+  ])
 
   const handleToggle = (index: number) => {
-    setToggles((prev) => ({
-      ...prev,
-      [index]: !prev[index],
-    }));
-  };
-
-  const customizeClickData = [
-    { icon: clock, title: "Time Tracking" },
-    { icon: clock, title: "Sprints" },
-    { icon: clock, title: "Custom Fields" },
-  ];
+    const updateIsEnabled = [...customizeClickData];
+    updateIsEnabled[index].isEnabled = !updateIsEnabled[index].isEnabled;
+    setCustomizeClickData(updateIsEnabled);
+  }
 
   const flexibilityCardsData = [
     {
@@ -69,7 +69,7 @@ export const Flexibility = () => {
       children: (
         <div>
           {customizeClickData.map((item, index) => {
-            const isEnabled = !!toggles[index];
+            const isEnabled = item.isEnabled;
             return (
               <div className="px-2 pb-1" key={index}>
                 <div
@@ -105,8 +105,8 @@ export const Flexibility = () => {
       </div>
 
       <div className="grid grid-cols-2 grid-rows-2 max-lg:grid-rows-1 gap-7 my-10 xl:w-[50%] md:w-[80%]">
-        {flexibilityCardsData.map((item) => (
-          <FlexibilityCards title={item.title} description={item.description} children={item.children} />
+        {flexibilityCardsData.map((item, index) => (
+          <FlexibilityCards key={index} title={item.title} description={item.description} children={item.children} />
         ))}
 
         <div className="col-span-2 rounded-2xl max-lg:hidden">
@@ -122,7 +122,7 @@ export const Flexibility = () => {
                 <img src={clickupIntegration1} alt="clickupIntegration1" className="w-full h-full object-cover rounded-2xl" />
               </div>
             </div>
-            <div className="absolute top-0 left-[26%] h-full">
+            <div className="absolute top-0 left-[26%] w-fit h-full">
               <img src={separator} alt="separator" className="w-full h-full object-cover rounded-2xl" />
             </div>
             <div className="text-white rounded-2xl">
