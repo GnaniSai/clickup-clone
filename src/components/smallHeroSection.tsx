@@ -53,7 +53,7 @@ export const SmallHeroSection = () => {
           <Button href="/" text="Get Started" width="full" fontSize="18px" />
         </div>
 
-        <div className="flex items-center gap-2 my-2">
+        <div className="flex flex-wrap justify-center items-center gap-2 my-2">
           <img src={stars} alt="stars" className="w-22" />
           <span className="text-xs text-gray-600">25,000+ reviews from</span>
           <img src={reviews} alt="reviews" className="w-22" />
